@@ -120,8 +120,6 @@ p {
 
 	/* needed so the absolutely positioned project label children will word wrap correctly */
 	position: relative;
-
-	border: 1px solid red;
 }
 
 .grid-item-content-wrapper > iframe,

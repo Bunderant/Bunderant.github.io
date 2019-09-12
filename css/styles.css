@@ -44,13 +44,13 @@ p {
 	padding: 20px 20px 0 20px;
 }
 
-.header,
-.footer {
+#header,
+#footer {
 	background-color: black;
 	height: 80px;
 }
 
-.splash {
+#splash {
 	display: flex;
 
 	justify-content: center;
@@ -60,7 +60,7 @@ p {
 	max-height: 400px;
 }
 
-.splash h1 {
+#splash h1 {
 	padding: 0;
 	color: whitesmoke;
 	text-align: center;
@@ -69,25 +69,25 @@ p {
 	position: absolute;
 }
 
-.splash video {
+#splash video {
 	min-width: 600px;
 	width: 100%;
 	height: auto;
 }
 
-.about {
+#about {
 	padding-bottom: 20px;
 }
 
-.projects {
+#projects {
 	background-color: skyblue;
 }
 
-.skills {
+#skills {
 	background-color: tan;
 }
 
-.skills h1 {
+#skills h1 {
 	text-shadow: 0.075em 0.075em 0.1em firebrick;
 }
 
@@ -103,7 +103,15 @@ p {
 	padding: 10px;
 }
 
-.skills .grid-item {
+.word {
+	white-space: nowrap;
+}
+
+.letter {
+	display: inline-block;
+}
+
+#skills .grid-item {
 	/* same height as SoundCloud iframe */
 	max-height: 300px; 
 }
@@ -152,7 +160,7 @@ p {
 		width: 50%;
 	}
 
-	.skills .grid-item {
+	#skills .grid-item {
 		width: 100%;
 	}
 }
@@ -163,15 +171,15 @@ p {
 		width: 25%;
 	}
 
-	.skills .grid-item {
+	#skills .grid-item {
 		width: 100%;
 	}
 
-	.projects .grid-item {
+	#projects .grid-item {
 		height: 400px;
 	}
 
-	.projects .grid-item-content-wrapper > img {
+	#projects .grid-item-content-wrapper > img {
 		height: 100%;
 		width: auto;
 	}

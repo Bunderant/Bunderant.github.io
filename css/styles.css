@@ -69,9 +69,10 @@ p {
 	position: absolute;
 }
 
-.splash img {
+.splash video {
+	min-width: 600px;
 	width: 100%;
-	display: block;
+	height: auto;
 }
 
 .about {

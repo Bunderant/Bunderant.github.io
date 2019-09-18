@@ -5,9 +5,9 @@ function initializeProjectTextAnimations() {
 
 	const projects = document.getElementById("projects").getElementsByClassName("grid-item");
 
-	const delayBetweenProjects = 1000;
-	const maxProjectDelay = 3000;
-	const delayBetweenLetters = 100;
+	const delayBetweenProjects = 500;
+	const maxProjectDelay = 2000;
+	const delayBetweenLetters = 50;
 	let initialDelay = 0;
 
 	for (let i = 0; i < projects.length; i++)

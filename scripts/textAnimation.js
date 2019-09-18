@@ -1,53 +1,28 @@
 
-document.addEventListener("DOMContentLoaded", beginProjectTextAnimations);
+document.addEventListener("DOMContentLoaded", initializeProjectTextAnimations);
 
-async function beginProjectTextAnimations()
-{
+function initializeProjectTextAnimations() {
+
 	const projects = document.getElementById("projects").getElementsByClassName("grid-item");
 
-	for (let i = 0; i < projects.length; i++) {
+	const delayBetweenProjects = 1000;
+	const maxProjectDelay = 3000;
+	const delayBetweenLetters = 100;
+	let initialDelay = 0;
 
-		await sleep(1000);
+	for (let i = 0; i < projects.length; i++)
+	{
+		let letterDelay = 0;
 
 		const letters = projects[i].getElementsByClassName("letter");
-		wavePulse(letters);
+		for (let letterIndex = 0; letterIndex < letters.length; letterIndex++)
+		{
+			const letter = letters[letterIndex];
+			letter.setAttribute("style", "animation-delay: " + (initialDelay + letterDelay) + "ms");
+			letterDelay += delayBetweenLetters;
+		}
+
+		initialDelay += delayBetweenProjects;
+		initialDelay = initialDelay % maxProjectDelay;
 	}
-}
-
-async function wavePulse(blockElements) {
-
-	for (let i = 0; i < blockElements.length; i++) {
-
-		await sleep(100);
-
-		const element = blockElements[i];
-
-		// keyframes padded out to create time between waves in the looping animation
-		element.animate(
-			[
-				{ transform: 'translate(0, 0)' },
-				{ transform: 'translate(0, 0)' },
-				{ transform: 'translate(0, 2px)' },
-				{ transform: 'translate(0, -4px)' },
-				{ transform: 'translate(0, 2px)' },
-				{ transform: 'translate(0, 0)' },
-				{ transform: 'translate(0, 0)' },
-				{ transform: 'translate(0, 0)' },
-				{ transform: 'translate(0, 0)' },
-				{ transform: 'translate(0, 0)' },
-				{ transform: 'translate(0, 0)' },
-				{ transform: 'translate(0, 0)' },
-				{ transform: 'translate(0, 0)' },
-			],
-			{
-				easing: 'cubic-bezier(0.25, 0.1, 0.25, 1)',
-				duration: 3000,
-				iterations: Infinity
-			}
-		);
-	};
-}
-
-function sleep(ms) {
-	return new Promise(resolve => setTimeout(resolve, ms));
 }

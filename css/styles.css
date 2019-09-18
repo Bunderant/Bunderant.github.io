@@ -109,6 +109,11 @@ p {
 
 .letter {
 	display: inline-block;
+
+	animation-duration: 3s;
+	animation-name: vertical_pulse;
+	animation-timing-function: ease-out;
+	animation-iteration-count: infinite;
 }
 
 #skills .grid-item {
@@ -145,6 +150,14 @@ p {
 	position: absolute;
 
 	padding: 15px;
+}
+
+@keyframes vertical_pulse {
+	0% { transform: translate(0, 0); }
+	5% { transform: translate(0, 2px); }
+	10% { transform: translate(0, -4px); }
+	15% { transform: translate(0, 2px); }
+	20% { transform: translate(0, 0); }
 }
 
 /* phone/mobile styles */

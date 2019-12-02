@@ -1,7 +1,12 @@
 #details {
-	background-color: skyblue;
+	background-color: gray;
 }
 
 .code-sample {
 	padding: 20px;
+}
+
+#my-role {
+	background-color: skyblue;
+	padding-bottom: 20px;
 }

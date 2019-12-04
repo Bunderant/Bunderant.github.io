@@ -14,6 +14,7 @@
 		<script src="highlight/highlight.pack.js"></script>
 
 		<script src="scripts/bloxelsEduTextAnimation.js"></script>
+		<script src="scripts/projectSampleModal.js"></script>
 	</head>
 
 	<script>
@@ -26,12 +27,42 @@
 
 	<body>
 		<div class="page">
+
+			<!-- Modal contents revealed by clicking modal trigger elements -->
+			<div id="modal-background">
+				<div id="modal-close-button">
+					<img src="images/close-button.png" />
+				</div>
+				<div id="modal-scroll-gradient">
+				</div>
+				<div id="modal-panel">
+					<div id="modal-video-container">
+						<video id="modal-splash" controls autoplay muted loop preload="auto">
+							<!-- poster image and source specified by the "data-modal-src" attribute on the modal trigger that was clicked -->
+						</video>
+					</div>
+					<!-- Begin test content for scrolling behavior. -->
+					<p>Pop shove-it mute-air betty axle set. Axle set deck bluntslide salad grind. Japan air birdie drop in method air. G-turn Jerry Hsu slam shoveit front foot impossible. Kidney boardslide ollie Brian Brannon carve. No comply 720 carve tailslide. Tail noseblunt slide Vans Calfornia Daze concave wax. Wax launch ramp berm chicken wing. Lance Mountain carve Primo slide slam pogo. Blunt Memory Screen boned out pivot 180. Mini ramp disaster shinner manual Sean Cliver. Rock and roll rad cess slide skate or die. </p>
+					<p>Pop shove-it mute-air betty axle set. Axle set deck bluntslide salad grind. Japan air birdie drop in method air. G-turn Jerry Hsu slam shoveit front foot impossible. Kidney boardslide ollie Brian Brannon carve. No comply 720 carve tailslide. Tail noseblunt slide Vans Calfornia Daze concave wax. Wax launch ramp berm chicken wing. Lance Mountain carve Primo slide slam pogo. Blunt Memory Screen boned out pivot 180. Mini ramp disaster shinner manual Sean Cliver. Rock and roll rad cess slide skate or die. </p>
+					<p>Pop shove-it mute-air betty axle set. Axle set deck bluntslide salad grind. Japan air birdie drop in method air. G-turn Jerry Hsu slam shoveit front foot impossible. Kidney boardslide ollie Brian Brannon carve. No comply 720 carve tailslide. Tail noseblunt slide Vans Calfornia Daze concave wax. Wax launch ramp berm chicken wing. Lance Mountain carve Primo slide slam pogo. Blunt Memory Screen boned out pivot 180. Mini ramp disaster shinner manual Sean Cliver. Rock and roll rad cess slide skate or die. </p>
+					<p>Pop shove-it mute-air betty axle set. Axle set deck bluntslide salad grind. Japan air birdie drop in method air. G-turn Jerry Hsu slam shoveit front foot impossible. Kidney boardslide ollie Brian Brannon carve. No comply 720 carve tailslide. Tail noseblunt slide Vans Calfornia Daze concave wax. Wax launch ramp berm chicken wing. Lance Mountain carve Primo slide slam pogo. Blunt Memory Screen boned out pivot 180. Mini ramp disaster shinner manual Sean Cliver. Rock and roll rad cess slide skate or die. </p>
+					<p>Pop shove-it mute-air betty axle set. Axle set deck bluntslide salad grind. Japan air birdie drop in method air. G-turn Jerry Hsu slam shoveit front foot impossible. Kidney boardslide ollie Brian Brannon carve. No comply 720 carve tailslide. Tail noseblunt slide Vans Calfornia Daze concave wax. Wax launch ramp berm chicken wing. Lance Mountain carve Primo slide slam pogo. Blunt Memory Screen boned out pivot 180. Mini ramp disaster shinner manual Sean Cliver. Rock and roll rad cess slide skate or die. </p>
+					<p>Pop shove-it mute-air betty axle set. Axle set deck bluntslide salad grind. Japan air birdie drop in method air. G-turn Jerry Hsu slam shoveit front foot impossible. Kidney boardslide ollie Brian Brannon carve. No comply 720 carve tailslide. Tail noseblunt slide Vans Calfornia Daze concave wax. Wax launch ramp berm chicken wing. Lance Mountain carve Primo slide slam pogo. Blunt Memory Screen boned out pivot 180. Mini ramp disaster shinner manual Sean Cliver. Rock and roll rad cess slide skate or die. </p>
+					<p>Pop shove-it mute-air betty axle set. Axle set deck bluntslide salad grind. Japan air birdie drop in method air. G-turn Jerry Hsu slam shoveit front foot impossible. Kidney boardslide ollie Brian Brannon carve. No comply 720 carve tailslide. Tail noseblunt slide Vans Calfornia Daze concave wax. Wax launch ramp berm chicken wing. Lance Mountain carve Primo slide slam pogo. Blunt Memory Screen boned out pivot 180. Mini ramp disaster shinner manual Sean Cliver. Rock and roll rad cess slide skate or die. </p>
+					<p>Pop shove-it mute-air betty axle set. Axle set deck bluntslide salad grind. Japan air birdie drop in method air. G-turn Jerry Hsu slam shoveit front foot impossible. Kidney boardslide ollie Brian Brannon carve. No comply 720 carve tailslide. Tail noseblunt slide Vans Calfornia Daze concave wax. Wax launch ramp berm chicken wing. Lance Mountain carve Primo slide slam pogo. Blunt Memory Screen boned out pivot 180. Mini ramp disaster shinner manual Sean Cliver. Rock and roll rad cess slide skate or die. </p>
+					<p>Pop shove-it mute-air betty axle set. Axle set deck bluntslide salad grind. Japan air birdie drop in method air. G-turn Jerry Hsu slam shoveit front foot impossible. Kidney boardslide ollie Brian Brannon carve. No comply 720 carve tailslide. Tail noseblunt slide Vans Calfornia Daze concave wax. Wax launch ramp berm chicken wing. Lance Mountain carve Primo slide slam pogo. Blunt Memory Screen boned out pivot 180. Mini ramp disaster shinner manual Sean Cliver. Rock and roll rad cess slide skate or die. </p>
+					<p>Pop shove-it mute-air betty axle set. Axle set deck bluntslide salad grind. Japan air birdie drop in method air. G-turn Jerry Hsu slam shoveit front foot impossible. Kidney boardslide ollie Brian Brannon carve. No comply 720 carve tailslide. Tail noseblunt slide Vans Calfornia Daze concave wax. Wax launch ramp berm chicken wing. Lance Mountain carve Primo slide slam pogo. Blunt Memory Screen boned out pivot 180. Mini ramp disaster shinner manual Sean Cliver. Rock and roll rad cess slide skate or die. </p>
+					<!-- End test content. -->
+				</div>
+			</div>
+
 			<div id="header" class="section">
 			</div>
+
 			<div id="splash" class="section">
 				<!-- TODO: poster image should eventually be first frame of the final video -->
 				<video autoplay muted loop preload="auto" poster="images/bloxels-edu-splash-480p.png">
-					<source src="images/bloxels-edu-splash-video-480p.mp4" type="video/mp4" />
+					<source src="videos/bloxels-edu-splash-video-480p.mp4" type="video/mp4" />
 				</video>
 				<h1>
 					<span class="word"><span class="letter">b</span><!--
@@ -47,6 +78,7 @@
 									--><span class="letter">u</span></span>
 				</h1>
 			</div>
+
 			<div id="about" class="section">
 				<h1>a little history</h1>
 				<p>Bloxels EDU is the third and latest incarnation of the brand that began with "Bloxels Builder" at Pixel Press
@@ -56,6 +88,7 @@
 					in their games.
 				</p>
 			</div>
+
 			<div id="my-role" class="section">
 				<h1>my role</h1>
 				<p>For this release, I rewrote all of the core platformer code, implemented and tested different approaches to client-side
@@ -69,6 +102,31 @@
 					options for the size, speed, jump, max health, and visual effects for any character. 
 				</p>
 			</div>
+
+			<div id="samples" class="section">
+				<h1>samples</h1>
+				<div class="grid-container">
+					<div class="grid-item">
+						<div class="modal-trigger">
+							<video autoplay muted loop preload="auto" poster="images/bloxels-edu-splash-480p.png">
+								<source src="videos/bloxels-edu-editor-modes-cover.mp4" type="video/mp4" 
+										data-modal-src="videos/bloxels-edu-editor-modes-1080p.mp4" />
+							</video>
+							<div class="border-image" ></div>
+						</div>
+					</div>
+					<div class="grid-item">
+						<div class="modal-trigger">
+							<video autoplay muted loop preload="auto" poster="images/bloxels-edu-splash-480p.png">
+								<source src="videos/bloxels-edu-editor-selection-move-cover.mp4" type="video/mp4" 
+										data-modal-src="videos/bloxels-edu-editor-selection-move-1080p.mp4" />
+							</video>
+							<div class="border-image" ></div>
+						</div>
+					</div>
+				</div>
+			</div>
+
 			<div id="details" class="section">
 				<h1>details</h1>
 				<div class="code-sample">
@@ -113,10 +171,13 @@ private void ApplyMovement()
 					</pre>
 				</div>
 			</div>
+
 			<div id="footer" class="section">
 
 			</div>
+
 		</div>
+
 	</body>
 
 </html>

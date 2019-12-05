@@ -49,8 +49,13 @@
 }
 
 #modal-close-button img {
+	content: url(../images/close-button.png);
 	width: 100%;
 	height: 100%;
+}
+
+#modal-close-button img:active {
+	content: url(../images/close-button-pressed.png);
 }
 
 #modal-scroll-gradient {

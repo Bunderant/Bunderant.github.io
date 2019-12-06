@@ -20,7 +20,7 @@ h2 {
 
 h1 {
 	text-transform: uppercase;
-	text-shadow: 0.075em 0.075em 0.1em blue;
+	text-shadow: 0.075em 0.075em 0em blue;
 }
 
 p {
@@ -67,7 +67,7 @@ p {
 	padding: 0;
 	color: whitesmoke;
 	text-align: center;
-	text-shadow: 0.075em 0.075em 0.1em blue, 0em 0em 1em black, 0em 0em 0.75em black;
+	text-shadow: 0.075em 0.075em 0em blue;
 
 	position: absolute;
 
@@ -101,7 +101,7 @@ p {
 }
 
 #skills h1 {
-	text-shadow: 0.075em 0.075em 0.1em firebrick;
+	text-shadow: 0.075em 0.075em 0em firebrick;
 }
 
 .grid-container {
@@ -157,7 +157,7 @@ p {
 .grid-item-content-wrapper > h2 {
 	color: whitesmoke;
 	text-transform: uppercase;
-	text-shadow: 0.1em 0.1em 0.5em blue, 0.1em 0.1em 0.1em blue;
+	text-shadow: 0.125em 0.125em 0em blue;
 
 	text-align: center;
 	position: absolute;

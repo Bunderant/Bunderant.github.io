@@ -117,53 +117,7 @@
 				</div>
 			</div>
 
-			<div id="details" class="section">
-				<h1>details</h1>
-				<div class="code-sample">
-					<pre class="cs"
-						style="tab-size: 4; max-height: 400px; font-family: 'Consolas', 'Inconsolata', 'Courier New', monospace;">
-private void ApplyMovement()
-{
-	float currentGravity = _gravityCalculation.Invoke();
-
-	// Calculate position delta due to gravity using simplified Velocity Verlet, and update position accordingly:
-	Vector2 gravityOffset = new Vector2(0f, 0.5f * currentGravity * unityTime.fixedDeltaTime * unityTime.fixedDeltaTime);
-	Vector2 adjustedVelocity = controller.Move((velocity * unityTime.fixedDeltaTime) + gravityOffset, unityTime.fixedDeltaTime);
-
-	//If we hit a ceiling during the move, zero out the vertical velocity:
-	if (controller.isTouchingCeiling && velocity.y > 0f)
-	{
-		velocity.y = 0f;
-	}
-	else  // Otherwise, update vertical velocity based on current gravity:
-	{
-		velocity.y += currentGravity * unityTime.fixedDeltaTime;
-		if (velocity.y <= movement.terminalFallingVelocity)
-		{
-			velocity.y = movement.terminalFallingVelocity;
-		}
-	}
-
-	velocity.x = adjustedVelocity.x;
-
-	// If we were jumping and our velocity became negative, set jumping flag to false:
-	isJumping &= (velocity.y > 0);
-
-	if (controller.BecameGroundedThisFrame)
-	{
-		HandleBecameGrounded();
-	}
-	else if (controller.LeftGroundThisFrame)
-	{
-		OnLeftGround?.Invoke();
-	}
-}
-					</pre>
-				</div>
-			</div>
-
 			<div id="footer" class="section">
-
 			</div>
 
 		</div>

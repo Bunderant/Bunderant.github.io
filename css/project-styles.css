@@ -4,6 +4,7 @@
 
 .code-sample {
 	padding: 20px;
+	overflow: auto;
 }
 
 #my-role {

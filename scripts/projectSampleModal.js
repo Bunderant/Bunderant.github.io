@@ -4,14 +4,12 @@ document.addEventListener("DOMContentLoaded", initializeModalListeners);
 function initializeModalListeners() {
 
 	var modalPanel = document.getElementById("modal-background");
-	var videoDisplay = document.getElementById("modal-splash");
 	var triggerElements = document.getElementsByClassName("modal-trigger");
 
 	for (let i = 0; i < triggerElements.length; i++)
 	{
 		triggerElements[i].onclick = function() {
 			showModal();
-			videoDisplay.src = this.getElementsByTagName("source")[0].getAttribute("data-modal-src");
 			modalPanel.scrollTop = 0;
 
 			let isAtTop = true;
@@ -27,6 +25,8 @@ function initializeModalListeners() {
 					gradient.style.display = 'block';
 				}
 			}
+
+			loadModal(this.getElementsByClassName("modal-content-source")[0].getAttribute('data-modal-src'));
 		}
 	}
 
@@ -57,4 +57,18 @@ function hideModal() {
 		modalElements[i].style.display = "none";
 	}
 	enableBodyOverflow();
+}
+
+async function loadModal(url) {
+	const contentDiv = document.getElementById("modal-panel");
+
+	contentDiv.textContent="";
+	contentDiv.insertAdjacentHTML('afterbegin', await fetchModalContent(url));
+
+	contentDiv.dispatchEvent(new CustomEvent('modalContentLoaded'));
+}
+
+async function fetchModalContent(url) {
+	const response = await fetch(new Request(url));
+	return await response.text();
 }

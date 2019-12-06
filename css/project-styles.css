@@ -46,8 +46,11 @@
 
 #modal-header-container {
 	position: fixed;
+
+	/* This is a little trick to center a fixed position element on the y-axis */
 	left: 50%;
 	transform: translateX(-50%);
+	
 	width: 100%;
 	max-width: 1150px; /* max-width just a little larger than the page so the close button leans left a bit */
 }

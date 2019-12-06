@@ -21,21 +21,35 @@
 	text-shadow: none;
 }
 
+#samples h2 {
+	z-index: 1;
+}
+
+#samples .grid-item:hover h2 {
+	text-shadow: 0em 0em 1em black;
+	animation: blinker 0.15s step-start 3;
+}
+
 #samples .grid-item img,
 #samples .grid-item video {
 	width: 100%;
+	filter: grayscale(70%);
 }
 
-#samples .grid-item:hover {
-	outline: 4px solid whitesmoke;
+#samples .grid-item:hover video {
+	filter: none;
 }
 
-#samples .grid-item:hover > .modal-trigger {
-	opacity: 0.7;
+#samples .grid-item-content-wrapper {
+	outline: 2px solid whitesmoke;
+}
+
+#samples .grid-item-content-wrapper:hover {
+	outline: 6px solid whitesmoke;
 }
 
 #modal-close-button {
-	z-index: 2;
+	z-index: 3;
 
 	position: fixed;
 	left: 4px;
@@ -60,7 +74,7 @@
 }
 
 #modal-scroll-gradient {
-	z-index: 1;
+	z-index: 2;
 
 	position: fixed;
 
@@ -74,7 +88,7 @@
 #modal-background {
 	display: none;
 	position: fixed;
-	z-index: 1;
+	z-index: 2;
 	left: 0;
 	right: 0;
 	height: 100%;
@@ -84,6 +98,7 @@
 }
 
 #modal-panel {
+	z-index: 2;
 	margin: 16px;
 
 	border-image-source: url(../images/modal-background.png);
@@ -117,4 +132,10 @@
 .grid-item-content-wrapper > h2 {
 	text-shadow: 0.125em 0.125em 0em black;
 	bottom: 0;
+}
+
+@keyframes blinker {
+	50% {
+		opacity: 0;
+	}
 }

@@ -103,6 +103,7 @@
 
 #modal-panel {
 	margin: 16px;
+	min-width: 0px; /* needed to prevent inner content from making panel larger than the window */
 	max-width: 1100px;
 
 	border-image-source: url(../images/modal-background.png);
@@ -114,7 +115,6 @@
 
 	display: flex;
 	flex-wrap: wrap;
-	align-items: center;
 }
 
 #modal-panel p {

@@ -12,18 +12,11 @@ function initializeModalListeners() {
 			showModal();
 			modalPanel.scrollTop = 0;
 
-			let isAtTop = true;
 			let gradient = document.getElementById("modal-scroll-gradient");
-			gradient.style.display = 'none';
+			gradient.style.opacity = 0;
 
 			modalPanel.onscroll = function() {
-				isAtTop = modalPanel.scrollTop < 10;
-				if (isAtTop && !(gradient.style.display === 'none')) {
-					gradient.style.display = 'none';
-				}
-				else if (!isAtTop && (gradient.style.display === 'none')) {
-					gradient.style.display = 'block';
-				}
+				gradient.style.opacity = Math.min(modalPanel.scrollTop / 10.0, 1);
 			}
 
 			loadModal(this.getElementsByClassName("modal-content-source")[0].getAttribute('data-modal-src'));

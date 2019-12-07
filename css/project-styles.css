@@ -136,6 +136,7 @@
 .grid-item-content-wrapper > h2 {
 	text-shadow: 0.125em 0.125em 0em black;
 	bottom: 0;
+	min-height: 3em;
 }
 
 @keyframes blinker {

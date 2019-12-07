@@ -1,30 +1,61 @@
 document.addEventListener("DOMContentLoaded", hideModal);
 document.addEventListener("DOMContentLoaded", initializeModalListeners);
 
+var dict = {};
+
 function initializeModalListeners() {
 
 	var modalPanel = document.getElementById("modal-background");
 	var triggerElements = document.getElementsByClassName("modal-trigger");
+	dict = {};
 
-	for (let i = 0; i < triggerElements.length; i++)
-	{
-		triggerElements[i].onclick = function() {
+	for (let i = 0; i < triggerElements.length; i++) {
+		const element = triggerElements[i];
+
+		dict["#" + element.id] = function () {
 			showModal();
 			modalPanel.scrollTop = 0;
 
 			let gradient = document.getElementById("modal-scroll-gradient");
 			gradient.style.opacity = 0;
 
-			modalPanel.onscroll = function() {
+			modalPanel.onscroll = function () {
 				gradient.style.opacity = Math.min(modalPanel.scrollTop / 10.0, 1);
 			}
 
-			loadModal(this.getElementsByClassName("modal-content-source")[0].getAttribute('data-modal-src'));
+			loadModal(element.getElementsByClassName("modal-content-source")[0].getAttribute('data-modal-src'));
+		};
+
+		element.onclick = function () {
+			window.location.hash = element.id;
+		};
+	}
+
+	// Modal opening/closing is controlled exclusively through hash changes
+	window.onhashchange = function () {
+		if (dict.hasOwnProperty(location.hash)) {
+			dict[location.hash]();
+		}
+		else {
+			hideModal();
+		}
+	};
+
+	document.getElementById("modal-close-button").onclick = function () {
+		// If the modal was linked to directly, set the hash to them empty string to trigger the modal to close
+		// rather than going "back" in history. Then, hitting "back" will actually reopen the modal. 
+		if (history.length > 1 && history.state == "direct-modal-link") {
+			location.hash = "";
+		}
+		else {
+			history.back()
 		}
 	}
 
-	document.getElementById("modal-close-button").onclick = function() {
-		hideModal();
+	// Open the modal immediately if it was linked to directly
+	if (dict.hasOwnProperty(location.hash)) {
+		history.replaceState("direct-modal-link", "", location.url);
+		dict[location.hash]();
 	}
 }
 
@@ -38,10 +69,10 @@ function disableBodyOverflow() {
 
 function showModal() {
 	var modalElements = document.getElementsByClassName("modal-toggle");
-	disableBodyOverflow();
 	for (let i = 0; i < modalElements.length; i++) {
 		modalElements[i].style.display = "block";
 	}
+	disableBodyOverflow();
 }
 
 function hideModal() {
@@ -55,7 +86,7 @@ function hideModal() {
 async function loadModal(url) {
 	const contentDiv = document.getElementById("modal-panel");
 
-	contentDiv.textContent="";
+	contentDiv.textContent = "";
 	contentDiv.insertAdjacentHTML('afterbegin', await fetchModalContent(url));
 
 	contentDiv.dispatchEvent(new CustomEvent('modalContentLoaded'));

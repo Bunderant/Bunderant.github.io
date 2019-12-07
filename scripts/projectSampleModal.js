@@ -42,10 +42,12 @@ function initializeModalListeners() {
 	};
 
 	document.getElementById("modal-close-button").onclick = function () {
-		// If the modal was linked to directly, set the hash to them empty string to trigger the modal to close
-		// rather than going "back" in history. Then, hitting "back" will actually reopen the modal. 
-		if (history.length > 1 && history.state == "direct-modal-link") {
-			location.hash = "";
+		// If the modal was linked to directly, push state and close the modal manually rather than going "back"
+		// in history. Then, hitting "back" will actually reopen the modal. 
+		if (history.length > 0 && history.state == "direct-modal-link") {
+			var url = String(location);
+			history.pushState(null, null, url.substring(0, url.indexOf('#')));
+			hideModal();
 		}
 		else {
 			history.back()

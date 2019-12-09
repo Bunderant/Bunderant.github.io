@@ -1,7 +1,9 @@
-
+window.addWordAndLetterClassesToText = addWordAndLetterClassesToText;
 document.addEventListener("DOMContentLoaded", initializeProjectTextAnimations);
 
 function initializeProjectTextAnimations() {
+
+	addWordAndLetterClassesToText("projects", "h2");
 
 	const projects = document.getElementById("projects").getElementsByClassName("grid-item");
 
@@ -24,5 +26,36 @@ function initializeProjectTextAnimations() {
 
 		initialDelay += delayBetweenProjects;
 		initialDelay = initialDelay % maxProjectDelay;
+	}
+}
+
+function addWordAndLetterClassesToText(rootContainerId, textElementTypeName) {
+
+	const container = document.getElementById(rootContainerId);
+	const elements = container.getElementsByTagName(textElementTypeName);
+
+	const startWordSpan = "<span class='word'>";
+	const startLetterSpan = "<span class='letter'>"
+	const endSpan = "</span>";
+
+	for (let i = 0; i < elements.length; i++) {
+		const textElement = elements[i];
+		var words = textElement.textContent.split(' ');
+
+		var generatedHtml = "";
+		for (let wordIndex = 0; wordIndex < words.length; wordIndex++) {
+			var word = words[wordIndex];
+			generatedHtml += startWordSpan;
+			for (let letterIndex = 0; letterIndex < word.length; letterIndex++) {
+				generatedHtml += startLetterSpan + word[letterIndex] + endSpan;
+			}
+			generatedHtml += endSpan;
+
+			if (wordIndex != words.length) {
+				generatedHtml += ' ';
+			}
+		}
+
+		textElement.innerHTML = generatedHtml;
 	}
 }

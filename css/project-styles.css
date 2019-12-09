@@ -21,11 +21,6 @@
 	z-index: 1;
 }
 
-#samples .grid-item:hover h2 {
-	text-shadow: 0em 0em 1em black;
-	animation: blinker 0.15s step-start 3;
-}
-
 #samples .grid-item img,
 #samples .grid-item video {
 	width: 100%;
@@ -34,14 +29,6 @@
 
 #samples .grid-item:hover video {
 	filter: none;
-}
-
-#samples .grid-item-content-wrapper {
-	outline: 2px solid whitesmoke;
-}
-
-#samples .grid-item-content-wrapper:hover {
-	outline: 6px solid whitesmoke;
 }
 
 #modal-header-container {

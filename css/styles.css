@@ -141,6 +141,25 @@ p {
 	position: relative;
 }
 
+.tiled-link {
+	outline: 3px solid whitesmoke;
+}
+
+.tiled-link:hover {
+	outline: 6px solid whitesmoke;
+}
+
+.tiled-link:hover h2 {
+	text-shadow: 0em 0em 1em black;
+	animation: blinker 0.15s step-start 3;
+}
+
+@keyframes blinker {
+	50% {
+		opacity: 0;
+	}
+}
+
 .grid-item-content-wrapper > iframe,
 .grid-item-content-wrapper > img {
 	width: 100%;

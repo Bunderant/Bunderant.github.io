@@ -24,9 +24,8 @@ h1 {
 }
 
 p {
-	font-family: 'Courier New', Courier, monospace;
-	font-weight: bold;
-	font-size: 1.25em;
+	font-family: 'VT323', 'Courier New', Courier, monospace;
+	font-size: 1.75em;
 }
 
 a, a:link, a:visited {

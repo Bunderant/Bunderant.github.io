@@ -126,9 +126,3 @@
 	text-shadow: 0.125em 0.125em 0em black;
 	top: 75%;
 }
-
-@keyframes blinker {
-	50% {
-		opacity: 0;
-	}
-}

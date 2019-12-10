@@ -3,20 +3,20 @@ document.addEventListener("DOMContentLoaded", initializeProjectTextAnimations);
 
 function initializeProjectTextAnimations() {
 
-	addWordAndLetterClassesToText("projects", "h2");
+	addWordAndLetterClassesToText("shipped", "h2");
 
-	const projects = document.getElementById("projects").getElementsByClassName("grid-item");
+	const shippedProjects = document.getElementById("shipped").getElementsByClassName("grid-item");
 
 	const delayBetweenProjects = 500;
 	const maxProjectDelay = 2000;
 	const delayBetweenLetters = 50;
 	let initialDelay = 0;
 
-	for (let i = 0; i < projects.length; i++)
+	for (let i = 0; i < shippedProjects.length; i++)
 	{
 		let letterDelay = 0;
 
-		const letters = projects[i].getElementsByClassName("letter");
+		const letters = shippedProjects[i].getElementsByClassName("letter");
 		for (let letterIndex = 0; letterIndex < letters.length; letterIndex++)
 		{
 			const letter = letters[letterIndex];

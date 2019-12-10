@@ -82,11 +82,7 @@ p {
 	width: 100%;
 }
 
-#about {
-	padding-bottom: 20px;
-}
-
-#projects {
+#shipped {
 	background-color: skyblue;
 }
 
@@ -128,7 +124,7 @@ p {
 	max-height: 300px; 
 }
 
-/* an additional buffer betwen grid items and their content for better control over padding */
+/* an additional buffer between grid items and their content for better control over padding */
 .grid-item-content-wrapper {
 	cursor: pointer;
 
@@ -227,11 +223,11 @@ p {
 		width: 100%;
 	}
 
-	#projects .grid-item {
+	#shipped .grid-item {
 		height: 400px;
 	}
 
-	#projects .grid-item-content-wrapper > img {
+	#shipped .grid-item-content-wrapper > img {
 		height: 100%;
 		width: auto;
 	}

@@ -3,6 +3,10 @@
 	overflow: auto;
 }
 
+#history p {
+	padding-bottom: 20px;
+}
+
 #my-role {
 	background-color: skyblue;
 	padding-bottom: 20px;

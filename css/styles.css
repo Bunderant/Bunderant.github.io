@@ -233,6 +233,17 @@ a:active {
 	}
 }
 
+/* shared mobile and tablet styles */
+@media only screen and (min-width: 0px) and (max-width: 1024px) {
+	img {
+		user-select: none;
+		-moz-user-select: none;
+		-webkit-user-drag: none;
+		-webkit-user-select: none;
+		-ms-user-select: none;
+	}
+}
+
 /* desktop styles */
 @media only screen and (min-width: 1025px) {
 	.grid-item {

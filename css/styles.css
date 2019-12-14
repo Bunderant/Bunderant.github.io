@@ -44,7 +44,18 @@ a:active {
 }
 
 .section {
+	border-top: 0px;
+	border-bottom: 4px;
+	border-left: 0px;
+	border-right: 0px;
+	border-style: solid;
+	border-color: black;
 	background-color: whitesmoke;
+}
+
+#footer {
+	border-bottom: 0px;
+	border-style: none;
 }
 
 .section h1 {

@@ -183,6 +183,14 @@ a:active {
 	transition: outline-width 0.2s;
 }
 
+.tiled-link .scale-container {
+	height: 100%;
+
+	transform: scale(1.0);
+	
+	transition: transform 0.2s;
+}
+
 .tiled-link:hover {
 	outline: 6px solid whitesmoke;
 
@@ -194,6 +202,12 @@ a:active {
 
 	top: 50%;
 	transition: top 0.2s;
+}
+
+.tiled-link:hover .scale-container {
+	transform: scale(1.2);
+	
+	transition: transform 0.2s;
 }
 
 .tiled-link:hover .overlay {

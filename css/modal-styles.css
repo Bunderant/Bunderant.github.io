@@ -6,7 +6,7 @@
 	transform: translateX(-50%);
 
 	width: 100%;
-	max-width: 1150px; /* max-width just a little larger than the page so the close button leans left a bit */
+	max-width: 1074px; /* max-width just a little larger than the page so the close button leans left a bit */
 }
 
 #modal-close-button {
@@ -56,8 +56,9 @@
 
 #modal-panel {
 	margin: 16px;
+
 	min-width: 0px; /* needed to prevent inner content from making panel larger than the window */
-	max-width: 1100px;
+	max-width: 1024px;
 
 	border-image-source: url(../images/modal-background.png);
 	border-image-slice: 16 fill;

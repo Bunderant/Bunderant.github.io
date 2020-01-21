@@ -182,10 +182,6 @@
 	border-color: inherit;
 }
 
-.no-text {
-	font-size: 0;
-}
-
 @keyframes fade {
 	0% {
 		opacity: 0;

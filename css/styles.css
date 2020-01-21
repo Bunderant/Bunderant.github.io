@@ -8,6 +8,11 @@ video:focus {
 	outline: none;
 }
 
+/* Prevents a gap between images and their containing div */
+img {
+	vertical-align: middle;
+}
+
 html {
 	background-color: rgb(0, 0, 0);
 }
@@ -164,6 +169,7 @@ a:active {
 
 .tiled-link {
 	outline: 3px solid whitesmoke;
+	background-color: whitesmoke;
 }
 
 .tiled-link:hover {

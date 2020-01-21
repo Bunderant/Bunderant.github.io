@@ -68,8 +68,13 @@ a:active {
 }
 
 #header,
-#footer {
+#footer,
+#splash {
 	background-color: black;
+}
+
+#header,
+#footer {
 	height: 80px;
 }
 

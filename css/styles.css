@@ -46,6 +46,22 @@ a, a:link, a:visited {
 	text-decoration: none;
 	text-shadow: 0.05em 0.05em 0em blue;
 	color: inherit;
+
+	/* Underline transition fanciness inspired by http://pleeease.io */
+	background-image: linear-gradient(blue, blue);
+	background-repeat: no-repeat;
+	background-position: bottom;
+	background-size: 100% 3px;
+	padding: 0 4px;
+
+	transition: background-size .2s, color .2s;
+}
+
+a:hover {
+	background-size: 100% 100%;
+	color: whitesmoke;
+
+	transition: background-size .2s, color .2s;
 }
 
 a:active {

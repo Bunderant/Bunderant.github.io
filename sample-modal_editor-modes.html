@@ -1,15 +1,216 @@
+<h1>Editor Modes</h1>
+
 <div id="modal-video-container">
-	<video id="modal-splash" controls autoplay muted loop preload="auto">
+	<video id="modal-splash" autoplay muted loop preload="auto">
 		<source	src="videos/bloxels-edu-editor-modes-1080p.mp4" type="video/mp4" />
 	</video>
 </div>
-<p>Pop shove-it mute-air betty axle set. Axle set deck bluntslide salad grind. Japan air birdie drop in method air. G-turn Jerry Hsu slam shoveit front foot impossible. Kidney boardslide ollie Brian Brannon carve. No comply 720 carve tailslide. Tail noseblunt slide Vans Calfornia Daze concave wax. Wax launch ramp berm chicken wing. Lance Mountain carve Primo slide slam pogo. Blunt Memory Screen boned out pivot 180. Mini ramp disaster shinner manual Sean Cliver. Rock and roll rad cess slide skate or die. </p>
-<p>Pop shove-it mute-air betty axle set. Axle set deck bluntslide salad grind. Japan air birdie drop in method air. G-turn Jerry Hsu slam shoveit front foot impossible. Kidney boardslide ollie Brian Brannon carve. No comply 720 carve tailslide. Tail noseblunt slide Vans Calfornia Daze concave wax. Wax launch ramp berm chicken wing. Lance Mountain carve Primo slide slam pogo. Blunt Memory Screen boned out pivot 180. Mini ramp disaster shinner manual Sean Cliver. Rock and roll rad cess slide skate or die. </p>
-<p>Pop shove-it mute-air betty axle set. Axle set deck bluntslide salad grind. Japan air birdie drop in method air. G-turn Jerry Hsu slam shoveit front foot impossible. Kidney boardslide ollie Brian Brannon carve. No comply 720 carve tailslide. Tail noseblunt slide Vans Calfornia Daze concave wax. Wax launch ramp berm chicken wing. Lance Mountain carve Primo slide slam pogo. Blunt Memory Screen boned out pivot 180. Mini ramp disaster shinner manual Sean Cliver. Rock and roll rad cess slide skate or die. </p>
-<p>Pop shove-it mute-air betty axle set. Axle set deck bluntslide salad grind. Japan air birdie drop in method air. G-turn Jerry Hsu slam shoveit front foot impossible. Kidney boardslide ollie Brian Brannon carve. No comply 720 carve tailslide. Tail noseblunt slide Vans Calfornia Daze concave wax. Wax launch ramp berm chicken wing. Lance Mountain carve Primo slide slam pogo. Blunt Memory Screen boned out pivot 180. Mini ramp disaster shinner manual Sean Cliver. Rock and roll rad cess slide skate or die. </p>
-<p>Pop shove-it mute-air betty axle set. Axle set deck bluntslide salad grind. Japan air birdie drop in method air. G-turn Jerry Hsu slam shoveit front foot impossible. Kidney boardslide ollie Brian Brannon carve. No comply 720 carve tailslide. Tail noseblunt slide Vans Calfornia Daze concave wax. Wax launch ramp berm chicken wing. Lance Mountain carve Primo slide slam pogo. Blunt Memory Screen boned out pivot 180. Mini ramp disaster shinner manual Sean Cliver. Rock and roll rad cess slide skate or die. </p>
-<p>Pop shove-it mute-air betty axle set. Axle set deck bluntslide salad grind. Japan air birdie drop in method air. G-turn Jerry Hsu slam shoveit front foot impossible. Kidney boardslide ollie Brian Brannon carve. No comply 720 carve tailslide. Tail noseblunt slide Vans Calfornia Daze concave wax. Wax launch ramp berm chicken wing. Lance Mountain carve Primo slide slam pogo. Blunt Memory Screen boned out pivot 180. Mini ramp disaster shinner manual Sean Cliver. Rock and roll rad cess slide skate or die. </p>
-<p>Pop shove-it mute-air betty axle set. Axle set deck bluntslide salad grind. Japan air birdie drop in method air. G-turn Jerry Hsu slam shoveit front foot impossible. Kidney boardslide ollie Brian Brannon carve. No comply 720 carve tailslide. Tail noseblunt slide Vans Calfornia Daze concave wax. Wax launch ramp berm chicken wing. Lance Mountain carve Primo slide slam pogo. Blunt Memory Screen boned out pivot 180. Mini ramp disaster shinner manual Sean Cliver. Rock and roll rad cess slide skate or die. </p>
-<p>Pop shove-it mute-air betty axle set. Axle set deck bluntslide salad grind. Japan air birdie drop in method air. G-turn Jerry Hsu slam shoveit front foot impossible. Kidney boardslide ollie Brian Brannon carve. No comply 720 carve tailslide. Tail noseblunt slide Vans Calfornia Daze concave wax. Wax launch ramp berm chicken wing. Lance Mountain carve Primo slide slam pogo. Blunt Memory Screen boned out pivot 180. Mini ramp disaster shinner manual Sean Cliver. Rock and roll rad cess slide skate or die. </p>
-<p>Pop shove-it mute-air betty axle set. Axle set deck bluntslide salad grind. Japan air birdie drop in method air. G-turn Jerry Hsu slam shoveit front foot impossible. Kidney boardslide ollie Brian Brannon carve. No comply 720 carve tailslide. Tail noseblunt slide Vans Calfornia Daze concave wax. Wax launch ramp berm chicken wing. Lance Mountain carve Primo slide slam pogo. Blunt Memory Screen boned out pivot 180. Mini ramp disaster shinner manual Sean Cliver. Rock and roll rad cess slide skate or die. </p>
-<p>Pop shove-it mute-air betty axle set. Axle set deck bluntslide salad grind. Japan air birdie drop in method air. G-turn Jerry Hsu slam shoveit front foot impossible. Kidney boardslide ollie Brian Brannon carve. No comply 720 carve tailslide. Tail noseblunt slide Vans Calfornia Daze concave wax. Wax launch ramp berm chicken wing. Lance Mountain carve Primo slide slam pogo. Blunt Memory Screen boned out pivot 180. Mini ramp disaster shinner manual Sean Cliver. Rock and roll rad cess slide skate or die. </p>
+<p>One of the inherent challenges to all Bloxels game editors has been presenting all of the core customization options 
+	to players without overwhelming them, and at the same time making those options visible and easily accessible. For
+	version 2.0, Aaron and I arrived at a tabbed implementation for the main editor tools. Each tab presents a mutually 
+	exclusive set of tools, each paired with a clear rendering transformation over the editor viewport. 
+</p>
+<p>There are three primary actions involved in creating a Bloxels game: "Build", "Decorate", and "Configure". Each action 
+	has a different priority to communicate visually, but the game map needs to be displayed in a recognizable way 
+	regardless of context. 
+</p>
+
+<h1>Decorate</h1>
+
+<p>Each pixel of any Bloxels art is stored as a single byte: the index pointing to a palette containing its true color. 
+	All of the following examples will be illustrated using the same 8x8 artwork and corresponding sample palette. 
+</p>
+
+<div class="figure-container">
+	<div class="figure">
+		<div class="image-container no-text" style="background-color: black;">
+			<img style="max-width: 33.3333%; margin: 0 auto; display: block;" src="images/palette-demo-tile.png" />
+		</div>
+		<div class="label-container footer">
+			<p>The example tile art we'll be using for demonstration.</p>
+		</div>
+	</div>
+	<div class="figure-separator"></div>
+	<div class="figure">
+		<div class="image-container no-text">
+			<img src="images/palette-strip-basic.png" />
+		</div>
+		<div class="label-container footer">
+			<p>The palette strip, a superset of the 4 colors used by the tile art.</p>
+		</div>
+	</div>
+</div>
+
+<p>Again, each of the other editor modes needs to change the way tiles are rendered based on their underlying block colors. 
+	I'll refer to this color value as "type" from now on to avoid confusion when referring to palette colors. There are 8 
+	different types: red (hazard), orange (movable), yellow (coin), green (terrain), blue (water), purple (enemy), pink (powerup), 
+	and white (story).
+</p>
+
+<p>Since each type needs to be factored into the rendering information, the one-dimensional palette index is no longer enough. 
+	Each type will have its own palette strip, so I added a second dimension to the palette texture, corresponding to the 8 
+	possible block types, keeping the original bottom row as "unassigned" for good measure. 
+</p>
+
+<p>Because "decorate" mode doesn't alter the rendering based on block type, the original palette strip is simply repeated 
+	along the new 2D palette's y-axis. 
+</p>
+
+<div class="figure-container">
+	<div class="figure">
+		<div class="image-container no-text">
+			<img src="images/palette-strip-decorate-mode.png" />
+		</div>
+		<div class="label-container footer">
+			<p>The same palette, smeared across 9 rows (1 unassigned, plus 8 block types represented). </p>
+		</div>
+	</div>
+</div>
+
+<p> Now, this texture can be modified on a per-row basis corresponding to each specific block type, affecting the 
+	way individual types are rendered (without the need for a different shader or multiple material instances). I 
+	have more detailed explanations in the "build" and "configure" sections, but first let's take a look at the 
+	fragment shader to clarify a few details.
+</p>
+
+<div class="figure-container">
+	<div class="figure">	
+		<div class="code-sample">
+			<pre class="glsl"
+				style="tab-size: 4; max-height: 400px; font-family: 'Consolas', 'Inconsolata', 'Courier New', monospace;">
+fixed4 frag(v2f i) : SV_Target
+{
+	UNITY_SETUP_INSTANCE_ID(i);
+
+	half2 UV = half2(
+		i.uv.x,
+		i.uv.y + (UNITY_ACCESS_INSTANCED_PROP(Props, _BlockColor) / 9.0)
+	);
+
+	return tex2D(_MainTex, UV);
+}</pre>
+		</div>
+		<div class="separator" style="border-color: whitesmoke;"></div>
+		<div class="label-container footer">
+			<p>The fragment shader. The _BlockColor property takes advantage of GPU instancing to avoid extra batches. 
+				In retrospect, I could've precalculated and saved the UV y-coordinate rather than _BlockColor, as everything 
+				but _BlockColor was a constant for my purposes. 
+			</p>
+		</div>
+	</div>
+</div>
+
+
+<p>In the shader, "_MainTex" refers to the 9-pixel high palette texture, and "_BlockColor" to the assigned block type. 
+	You may have thought the use of UV coordinates was a bit strange, and you'd be right. 
+	Yep, every "pixel" of user art is rendered as a pair of triangles, mapped to UV coordinates offset along the y-axis by 
+	_BlockColor. That each tile is composed of a dense mesh like this is a relic of Bloxels' 2.5D origins. The core tech 
+	here could benefit a lot from Unity's recently improved texture APIs. 
+</p>
+
+<h1>Build</h1>
+
+<p>In this mode, the block tools are used to add undecorated tiles to empty cells, or to change the block type of existing
+	tiles. It's extremely useful to see the artwork and block type simultaneously (made possible by the 2D palette shader), 
+	to avoid changing a tile decorated with lava from a hazard into water, for instance. As another benefit, this opens up a 
+	different approach to level building, where a creator could build their entire foundation from a single block type, adding 
+	type specificity after they've finished decorating. 
+</p>
+
+<div class="figure-container">
+	<div class="figure">
+		<div class="label-container header">
+			<p>An example transition between the "decorate" and "build" contexts. </p>
+		</div>
+		<div class="image-container no-text">
+			<img class="expand-width" src="images/decorate-base.png" />
+			<img class="expand-width fade-cycle-overlay" src="images/decorate-to-build-cover.png" />
+		</div>
+		<div class="label-container footer">
+			<p>TOP: The shader lookup texture.<br/>
+				BOTTOM: Three tiles with the same art applied, but different underlying block types. From left to right: 
+				orange (movable), green (terrain), and purple (enemy). 
+			</p>
+		</div>
+	</div>
+</div>
+
+<p>When the "build" tab is selected, the 2D palette texture from the tiles' shared material is animated as shown in the 
+	figure below. Since all tiles share the same material instance, there is no need to access individual tile objects to
+	manipulate them. 
+</p>
+
+<div class="figure-container">
+	<div class="figure">	
+		<div class="code-sample">
+			<pre class="csharp"
+				style="tab-size: 4; font-family: 'Consolas', 'Inconsolata', 'Courier New', monospace;">
+private void InterpolateColors(
+	Color32[] fromColors,
+	Color32[] toColors,
+	Texture2D toTexture,
+	float duration)
+{
+	int colorCount = _colorBuffer.Length;
+	Array.Copy(fromColors, _colorBuffer, colorCount);
+
+	float tweenProgress = 0f;
+	_tween = DOTween.To(
+		() => tweenProgress, x => tweenProgress = x, 1f, duration
+	).OnUpdate(
+		() => {
+			for (int i = 0; i < colorCount; i++)
+			{
+				_colorBuffer[i] = Color32.Lerp(
+					fromColors[i],
+					toColors[i],
+					tweenProgress
+				);
+			}
+			toTexture.SetPixels32(_colorBuffer);
+			toTexture.Apply();
+		}
+	).OnComplete(
+		() => {
+			toTexture.SetPixels32(toColors);
+			toTexture.Apply();
+		}
+	);
+}</pre>
+		</div>
+		<div class="separator" style="border-color: whitesmoke;"></div>
+		<div class="label-container footer">
+			<p>This is the core method that handles the palette texture transitions. The parameters for each palette variant
+				are cached at the class level, and the tile material's texture is copied and replaced when the app loads so 
+				the original texture is never modified. 
+			</p>
+		</div>
+	</div>
+</div>
+
+<h1>Configure</h1>
+
+<p>A few specific block types have unique configuration options. Each has its own popup menu, accessible via "config" mode. 
+	After selecting the config tab, all tiles that aren't configurable have their colors desaturated, while configurable 
+	tiles' original colors are preserved. In addition, each configurable tile gets an outline color-coded to its block type, 
+	making it obvious that it can be selected to open its settings menu. 
+</p>
+
+<div class="figure-container">
+	<div class="figure">
+		<div class="label-container header">
+			<p>An example transition between the "decorate" and "config" contexts. </p>
+		</div>
+		<div class="image-container no-text">
+			<img class="expand-width" src="images/decorate-base.png" />
+			<img class="expand-width fade-cycle-overlay" src="images/decorate-to-config-cover.png" />
+		</div>
+		<div class="label-container footer">
+			<p>TOP: The shader lookup texture.<br/>
+				BOTTOM: Three tiles with the same art applied, but different underlying block types. For config mode, only 
+				non-configurable tiles transition to grayscale. From left to right: orange (movable), green (terrain), and 
+				purple (enemy). Of the three, only enemy tiles are configurable, so their tile art is not altered by the shader. 
+			</p>
+		</div>
+	</div>
+</div>

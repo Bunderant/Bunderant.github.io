@@ -1,0 +1,230 @@
+#modal-header-container {
+	position: fixed;
+
+	/* This is a little trick to center a fixed position element on the y-axis */
+	left: 50%;
+	transform: translateX(-50%);
+
+	width: 100%;
+	max-width: 1150px; /* max-width just a little larger than the page so the close button leans left a bit */
+}
+
+#modal-close-button {
+	cursor: pointer;
+
+	position: fixed;
+	left: 4px;
+	top: 4px;
+
+	width: 60px;
+	height: 60px;
+}
+
+#modal-close-button img {
+	content: url(../images/close-button.png);
+	width: 100%;
+	height: 100%;
+}
+
+#modal-close-button img:active {
+	content: url(../images/close-button-pressed.png);
+}
+
+#modal-scroll-gradient {
+	position: fixed;
+
+	width: 100%;
+	height: 34px;
+
+	background-color: rgb(0,0,0);
+	background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 50%);
+}
+
+#modal-background {
+	z-index: 2;
+
+	display: none;
+	position: fixed;
+	left: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+	overflow: auto;
+	background-color: rgba(0, 0, 0, 0.9);
+}
+
+#modal-panel-container {
+	display: flex;
+	justify-content: center;
+}
+
+#modal-panel {
+	margin: 16px;
+	min-width: 0px; /* needed to prevent inner content from making panel larger than the window */
+	max-width: 1100px;
+
+	border-image-source: url(../images/modal-background.png);
+	border-image-slice: 16 fill;
+	border-image-repeat: stretch;
+	border-image-width: 16px;
+	border-width: 16px;
+	border-style: solid;
+
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#modal-panel p {
+	color: black;
+	padding: 8px;
+}
+
+.container {
+	position: relative;
+	width: 100%;
+}
+
+.container p {
+	margin: none;
+	position: relative;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+#modal-video-container {
+	width: 100%;
+}
+
+#modal-panel video {
+	padding: 16px;
+
+	width: 100%;
+	height: 100%;
+}
+
+.image-container {
+	position: relative;
+}
+
+.image-container > img {
+	width: 100%;
+}
+
+.img {
+	font-size: 0;
+}
+
+.fade-cycle-overlay {
+	position: absolute;
+	right: 0;
+	top: 0;
+
+	animation-name: fade;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-duration: 3s;
+	animation-direction: alternate;
+}
+
+#modal-panel h1 {
+	padding: 14px 0px 6px 0px;
+	color: black;
+	text-align: center;
+	text-shadow: none;
+
+	width: 100%;
+}
+
+.figure-container {
+	padding-bottom: 8px;
+	padding-top: 8px;
+	margin: 0 auto;
+}
+
+.figure-separator {
+	width: 100%;
+	height: 20px;
+}
+
+.figure {
+	border: 4px solid black;
+}
+
+.figure > .label-container {
+	width: 100%;
+
+	border-top: inherit;
+	border-bottom: inherit;
+	border-left: 0px;
+	border-right: 0px;
+
+	border-style: inherit;
+	border-color: inherit;
+
+	background-color: black;
+}
+
+.figure > .label-container.header {
+	border-top: 0px;
+}
+
+.figure > .label-container.footer {
+	border-bottom: 0px;
+}
+
+.figure > .label-container > p {
+	color: whitesmoke !important;
+	padding: 0 !important;
+	font-size: 1.25em;
+}
+
+.figure > .separator {
+	background-color: inherit;
+	border-top: inherit;
+	border-style: inherit;
+	border-color: inherit;
+}
+
+.no-text {
+	font-size: 0;
+}
+
+@keyframes fade {
+	0% {
+		opacity: 0;
+	}
+	25% {
+		opacity: 0;
+	}
+	75% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@media only screen and (min-width: 0px) and (max-width: 500px) {
+	#modal-panel video {
+		padding: 4px;
+		padding-bottom: 20px;
+	}
+}
+
+@media only screen and (min-width: 0px) and (max-width: 600px) {
+	.container p,
+	.figure-container {
+		width: 100%;
+	}
+}
+
+@media only screen and (min-width: 601px) { 
+	.container p {
+		width: 90%;
+	}
+	
+	.figure-container {
+		width: 80%;
+	}
+}

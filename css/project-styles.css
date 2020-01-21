@@ -28,14 +28,11 @@
 #samples .grid-item img,
 #samples .grid-item video {
 	width: 100%;
-	filter: grayscale(70%);
-}
-
-#samples .grid-item:hover video {
-	filter: none;
 }
 
 .grid-item-content-wrapper > h2 {
-	text-shadow: 0.125em 0.125em 0em black;
+	text-shadow: 0em 0em 0.5em black;
 	top: 75%;
+
+	transition: top 0.2s;
 }

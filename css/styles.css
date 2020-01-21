@@ -4,12 +4,17 @@
 	box-sizing: border-box;
 }
 
+.modal-content-source {
+	display: none;
+}
+
 video:focus {
 	outline: none;
 }
 
 /* Prevents a gap between images and their containing div */
-img {
+img,
+video {
 	vertical-align: middle;
 }
 
@@ -170,15 +175,42 @@ a:active {
 .tiled-link {
 	outline: 3px solid whitesmoke;
 	background-color: whitesmoke;
+
+	transition: outline-width 0.2s;
 }
 
 .tiled-link:hover {
 	outline: 6px solid whitesmoke;
+
+	transition: outline-width 0.2s;
 }
 
 .tiled-link:hover h2 {
 	text-shadow: 0em 0em 1em black;
-	animation: blinker 0.15s step-start 3;
+
+	top: 50%;
+	transition: top 0.2s;
+}
+
+.tiled-link:hover .overlay {
+	opacity: 0.7;
+	transition: opacity 0.2s;
+}
+
+.overlay {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+
+	width: 100%;
+	height: 100%;
+
+	background-color: black;
+
+	opacity: 0;
+
+	transition: opacity 0.2s;
 }
 
 @keyframes blinker {

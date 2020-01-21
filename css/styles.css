@@ -38,8 +38,9 @@ h1 {
 }
 
 p {
-	font-family: 'VT323', 'Courier New', Courier, monospace;
-	font-size: 1.75em;
+	font-family: 'Barlow Semi Condensed', sans-serif, monospace;
+	font-size: 1.333333em;
+	line-height: 1.333333em;
 }
 
 a, a:link, a:visited {
@@ -127,7 +128,6 @@ a:active {
 	padding: 0;
 	color: whitesmoke;
 	text-align: center;
-	text-shadow: 0.075em 0.075em 0em blue;
 
 	min-width: 95%;
 }

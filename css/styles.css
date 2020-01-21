@@ -4,6 +4,10 @@
 	box-sizing: border-box;
 }
 
+.mobile-breaking-space::after {
+	content: " ";
+}
+
 .modal-content-source {
 	display: none;
 }
@@ -256,6 +260,11 @@ a:active {
 
 /* phone/mobile styles */
 @media only screen and (min-width: 0px) and (max-width: 500px) {
+	.mobile-breaking-space::after {
+		content: "\A";
+		white-space: pre;
+	}
+
 	h1 {
 		font-size: 1.5em;
 	}

@@ -12,13 +12,11 @@ function initializeProjectTextAnimations() {
 	const delayBetweenLetters = 50;
 	let initialDelay = 0;
 
-	for (let i = 0; i < shippedProjects.length; i++)
-	{
+	for (let i = 0; i < shippedProjects.length; i++) {
 		let letterDelay = 0;
 
 		const letters = shippedProjects[i].getElementsByClassName("letter");
-		for (let letterIndex = 0; letterIndex < letters.length; letterIndex++)
-		{
+		for (let letterIndex = 0; letterIndex < letters.length; letterIndex++) {
 			const letter = letters[letterIndex];
 			letter.setAttribute("style", "animation-delay: " + (initialDelay + letterDelay) + "ms");
 			letterDelay += delayBetweenLetters;

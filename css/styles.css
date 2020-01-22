@@ -214,8 +214,6 @@ a:active {
 }
 
 .tiled-link:hover h2 {
-	text-shadow: 0em 0em 1em black;
-
 	top: 50%;
 	transition: top 0.2s;
 }

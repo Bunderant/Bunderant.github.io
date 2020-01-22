@@ -137,7 +137,7 @@ fixed4 frag(v2f i) : SV_Target
 
 <p>When the "build" tab is selected, the 2D palette texture from the tiles' shared material is animated as shown in the 
 	figure above. Since all tiles share the same material instance, there is no need to access individual tile objects to
-	manipulate them. See below for the code that animates the transition. 
+	manipulate them. For brevity's sake, See below for the code that animates the texture transitions. 
 </p>
 
 <div class="figure-container">
@@ -180,13 +180,15 @@ private void InterpolateColors(
 		</div>
 		<div class="separator" style="border-color: whitesmoke;"></div>
 		<div class="label-container footer">
-			<p>This is the core method that handles the palette texture transitions. The parameters for each palette variant
-				are cached at the class level, and the tile material's texture is copied and replaced when the app loads so 
-				the original texture is never modified. 
-			</p>
+			<p>This palette texture interpolator.</p>
 		</div>
 	</div>
 </div>
+
+<p>The parameters for each palette variant are cached at the class level, and passed into the method depending on the editor 
+	mode selected. To prevent the original material's palette texture from being modified, it is replaced with a duplicate 
+	generated at runtime when the script is loaded. 
+</p>
 
 <h1>Configure</h1>
 
@@ -213,4 +215,8 @@ private void InterpolateColors(
 			</p>
 		</div>
 	</div>
+</div>
+
+<div id="EOT">
+	<div class="image-container"></div>
 </div>

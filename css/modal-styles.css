@@ -26,6 +26,25 @@
 	height: 100%;
 }
 
+#EOT {
+	width: 100%;
+	height: 120px;
+	padding-bottom: 32px;
+}
+
+#EOT > .image-container {
+	height: 100%;
+	width: 100px;
+
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+
+	background-image: url(../images/end-of-transmission.png);
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
 #modal-scroll-gradient {
 	position: fixed;
 
@@ -94,8 +113,8 @@
 }
 
 #modal-panel video {
-	padding: 16px;
-
+	padding-top: 8px;
+	padding-bottom: 16px;
 	width: 100%;
 	height: 100%;
 }
@@ -125,7 +144,7 @@
 }
 
 #modal-panel h1 {
-	padding: 14px 0px 6px 0px;
+	padding: 40px 0px 8px 0px;
 	color: black;
 	text-align: center;
 	text-shadow: none;
@@ -198,13 +217,6 @@
 	}
 }
 
-@media only screen and (min-width: 0px) and (max-width: 500px) {
-	#modal-panel video {
-		padding: 4px;
-		padding-bottom: 20px;
-	}
-}
-
 @media only screen and (min-width: 0px) and (max-width: 600px) {
 	#modal-panel {
 		margin: 16px 0px;
@@ -219,6 +231,10 @@
 	.figure-container {
 		width: 100%;
 	}
+
+	#EOT {
+		padding-bottom: 0;
+	}
 }
 
 @media only screen and (min-width: 601px) { 
@@ -228,5 +244,22 @@
 	
 	.figure-container {
 		width: 80%;
+		padding: 16px 0 40px 0;
+	}
+
+	#modal-video-container {
+		width: 80%;
+		margin: 0 auto;
+	}
+
+	#modal-panel video {
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+
+	#modal-panel > p {
+		padding: 0px;
+		width: 80%;
+		margin: 0 auto;
 	}
 }

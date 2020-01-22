@@ -1,4 +1,10 @@
 #modal-header-container {
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+#modal-header {
 	position: fixed;
 
 	/* This is a little trick to center a fixed position element on the y-axis */

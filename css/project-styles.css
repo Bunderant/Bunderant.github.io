@@ -13,12 +13,12 @@
 }
 
 #samples {
-	background-color: black;
+	background-color: #371a76;
 }
 
 #samples h1 {
 	color: whitesmoke;
-	text-shadow: none;
+	text-shadow: 0.125em 0.125em 0em black;
 }
 
 #samples h2 {

@@ -186,8 +186,6 @@ p > a:active {
 
 /* an additional buffer between grid items and their content for better control over padding */
 .grid-item-content-wrapper {
-	cursor: pointer;
-
 	width: 100%;
 	height: 100%;
 
@@ -197,7 +195,13 @@ p > a:active {
 	position: relative;
 }
 
+a.tiled-link {
+	display: block;
+}
+
 .tiled-link {
+	cursor: pointer;
+
 	outline: 3px solid whitesmoke;
 	background-color: whitesmoke;
 	box-shadow: 6px 6px 6px black;

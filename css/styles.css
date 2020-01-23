@@ -4,6 +4,11 @@
 	box-sizing: border-box;
 }
 
+.no-select {
+	-webkit-tap-highlight-color: transparent; /* Not auto-generated, needed to prevent highlighting on Chrome mobile. */
+	user-select: none;
+}
+
 .mobile-breaking-space::after {
 	content: " ";
 }
@@ -310,13 +315,6 @@ a:active {
 
 	#skills .grid-item {
 		width: 100%;
-	}
-}
-
-/* shared mobile and tablet styles */
-@media only screen and (min-width: 0px) and (max-width: 1024px) {
-	img {
-		user-select: none;
 	}
 }
 

@@ -32,21 +32,19 @@
 	height: 100%;
 }
 
-#EOT {
+#EOF {
 	width: 100%;
 	height: 120px;
-	padding-bottom: 32px;
 }
 
-#EOT > .image-container {
+#EOF > .image-container {
 	height: 100%;
-	width: 100px;
 
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%, -50%);
 
-	background-image: url(../images/end-of-transmission.png);
+	background-image: url(../images/end-of-file.png);
 	background-position: center;
 	background-repeat: no-repeat;
 }
@@ -267,5 +265,9 @@
 		padding: 0px;
 		width: 80%;
 		margin: 0 auto;
+	}
+
+	#EOF {
+		padding-bottom: 32px;
 	}
 }

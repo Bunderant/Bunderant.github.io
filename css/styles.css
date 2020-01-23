@@ -200,8 +200,9 @@ p > a:active {
 .tiled-link {
 	outline: 3px solid whitesmoke;
 	background-color: whitesmoke;
+	box-shadow: 6px 6px 6px black;
 
-	transition: outline-width 0.2s;
+	transition: outline-width 0.2s, box-shadow 0.2s;
 }
 
 .tiled-link .scale-container {
@@ -214,8 +215,9 @@ p > a:active {
 
 .tiled-link:hover {
 	outline: 6px solid whitesmoke;
+	box-shadow: 9px 9px 6px black;
 
-	transition: outline-width 0.2s;
+	transition: outline-width 0.2s, box-shadow 0.2s;
 }
 
 .tiled-link:hover h2 {

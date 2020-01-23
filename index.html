@@ -23,6 +23,16 @@
 		<meta property="og:image:height" content="510" />
 	</head>
 
+	<script type="text/javascript">
+		document.addEventListener('DOMContentLoaded', (event) => {
+			let artPortfolioLink = document.getElementById("figure-drawing-link");
+			let confirmIt = function (e) {
+				if (!confirm('Possibly NSFW! Tastefully nude drawings ahead. Are you sure you want to open the gallery?')) e.preventDefault();
+			};
+			artPortfolioLink.addEventListener('click', confirmIt, false);
+		});
+	</script>
+
 	<body>
 		<div class="page">
 
@@ -88,9 +98,10 @@
 				</p>
 				<div class="grid-container no-select">
 					<div class="grid-item">
-						<div class="grid-item-content-wrapper">
+						<a id="figure-drawing-link" class="grid-item-content-wrapper tiled-link" style="display: block;" href="http://markagne.crevado.com">
 							<img src="images/figure-drawing-cover.JPG" draggable="false" />
-						</div>
+							<div class="overlay"></div>
+						</a>
 					</div>
 					<div class="grid-item">
 						<div class="grid-item-content-wrapper">

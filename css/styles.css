@@ -48,7 +48,7 @@ p {
 	line-height: 1.333333em;
 }
 
-a, a:link, a:visited {
+p > a, p > a:link, p > a:visited {
 	text-decoration: none;
 	text-shadow: 0.05em 0.05em 0em blue;
 	color: inherit;
@@ -63,14 +63,14 @@ a, a:link, a:visited {
 	transition: background-size .2s, color .2s;
 }
 
-a:hover {
+p > a:hover {
 	background-size: 100% 100%;
 	color: whitesmoke;
 
 	transition: background-size .2s, color .2s;
 }
 
-a:active {
+p > a:active {
 	color: inherit;
 }
 

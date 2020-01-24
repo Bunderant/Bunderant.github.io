@@ -25,7 +25,6 @@
 	z-index: 1;
 }
 
-#samples .grid-item img,
 #samples .grid-item video {
 	width: 100%;
 }

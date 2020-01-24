@@ -166,6 +166,18 @@ p > a:active {
 	padding: 10px;
 }
 
+/* Trick to force grid items to preserve their height in the flex layout if none is specified. */
+.grid-item::before {
+	content: '';
+	float: left;
+	padding-top: 100%;
+}
+
+.grid-item .background-image {
+	background-size: cover;
+	background-position: 50% 50%; /* Centered so that scaling on hover won't affect position. */
+}
+
 .word {
 	white-space: nowrap;
 }
@@ -236,7 +248,7 @@ a.tiled-link {
 }
 
 .tiled-link:hover .overlay {
-	opacity: 0.7;
+	opacity: 0.6;
 	transition: opacity 0.2s;
 }
 
@@ -262,8 +274,7 @@ a.tiled-link {
 	}
 }
 
-.grid-item-content-wrapper > iframe,
-.grid-item-content-wrapper > img {
+.grid-item-content-wrapper > iframe {
 	width: 100%;
 
 	position: relative;
@@ -287,6 +298,26 @@ a.tiled-link {
 	transform: translate(-50%, -50%);
 
 	padding: 15px;
+}
+
+#bg-bloxels-edu {
+	background-image: url(../images/project-covers/bloxels-edu-tinted.png);
+}
+
+#bg-star-wars {
+	background-image: url(../images/project-covers/star-wars-tinted.png);
+}
+
+#bg-bloxels-builder {
+	background-image: url(../images/project-covers/bloxels-builder-tinted.png);
+}
+
+#bg-adventure-time {
+	background-image: url(../images/project-covers/adventure-time-tinted.png);
+}
+
+#bg-figure-drawing {
+	background-image: url(../images/figure-drawing-cover.JPG);
 }
 
 @keyframes bounce {
@@ -336,10 +367,5 @@ a.tiled-link {
 
 	#shipped .grid-item {
 		height: 400px;
-	}
-
-	#shipped .grid-item-content-wrapper > img {
-		height: 100%;
-		width: auto;
 	}
 }

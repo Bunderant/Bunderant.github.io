@@ -221,7 +221,7 @@
 	border-color: inherit;
 }
 
-.row-outline {
+#modal-panel .figure-container .row-border {
 	position: absolute;
 
 	width: 100%;
@@ -231,19 +231,19 @@
 	border-right: 2px dashed whitesmoke;
 }
 
-.row-outline.orange {
+#modal-panel .figure-container .row-border.orange {
 	top: 35.294%;
 }
 
-.row-outline.green {
+#modal-panel .figure-container .row-border.green {
 	top: 23.529%;
 }
 
-.row-outline.purple {
+#modal-panel .figure-container .row-border.purple {
 	top: 11.765%;
 }
 
-#modal-panel .index-label {
+#modal-panel .figure-container .index-label {
 	position: absolute;
 
 	height: 5.8824%;
@@ -256,15 +256,15 @@
 	outline: 1px solid whitesmoke;
 }
 
-#modal-panel .index-label.cell {
+#modal-panel .figure-container .index-label.cell {
 	left: -2.9412%;
 }
 
-#modal-panel .index-label.tile {
+#modal-panel .figure-container .index-label.tile {
 	bottom: 2.9412%;
 }
 
-#modal-panel .index-label > p {
+#modal-panel .figure-container .index-label > p {
 	padding: 0;
 	font-size: 0.9em;
 
@@ -280,27 +280,27 @@
 	margin: 0;
 }
 
-.index-label.cell.orange {
+#modal-panel .figure-container .index-label.cell.orange {
 	top: 35.294%;
 }
 
-.index-label.cell.green {
+#modal-panel .figure-container .index-label.cell.green {
 	top: 23.529%;
 }
 
-.index-label.cell.purple {
+#modal-panel .figure-container .index-label.cell.purple {
 	top: 11.765%;
 }
 
-.index-label.tile.orange {
+#modal-panel .figure-container .index-label.tile.orange {
 	left: 2.9412%;
 }
 
-.index-label.tile.green {
+#modal-panel .figure-container .index-label.tile.green {
 	left: 35.4167%;
 }
 
-.index-label.tile.purple {
+#modal-panel .figure-container .index-label.tile.purple {
 	left: 68.75%;
 }
 

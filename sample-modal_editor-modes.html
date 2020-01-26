@@ -12,9 +12,9 @@
 		version 2.0, Aaron and I arrived at a tabbed implementation for the main editor tools. Each tab presents a mutually 
 		exclusive set of tools, each paired with a clear rendering transformation over the editor viewport. 
 	</p>
-	<p>There are three primary actions involved in creating a Bloxels game: "Build", "Decorate", and "Configure". Each action 
-		has a different priority to communicate visually, but the game map needs to be displayed in a recognizable way 
-		regardless of context. 
+	<p>There are three primary actions involved in creating a Bloxels game: <strong>Build</strong>, <strong>Decorate</strong>, 
+		and <strong>Configure</strong>. Each action has a different priority to communicate visually, but the game map needs 
+		to be displayed in a recognizable way regardless of context. 
 	</p>
 </div>
 
@@ -26,7 +26,7 @@
 			<img src="images/decorate-tools.png" />
 		</div>
 		<div class="label-container footer">
-			<p>Screenshot from Decorate mode (cropped).</p>
+			<p>Screenshot from <strong>Decorate</strong> mode (cropped).</p>
 		</div>
 	</div>
 </div>
@@ -59,18 +59,18 @@
 
 <div class="paragraph-container">
 	<p>Again, each of the other editor modes needs to change the way tiles are rendered based on their underlying block colors. 
-		I'll refer to this color value as "type" from now on to avoid confusion when referring to palette colors. There are 8 
+		I'll refer to this color value as <em>type</em> from now on to avoid confusion when referring to palette colors. There are 8 
 		different types: red (hazard), orange (movable), yellow (coin), green (terrain), blue (water), purple (enemy), pink (powerup), 
 		and white (story).
 	</p>
 	
 	<p>Since each type needs to be factored into the rendering information, the one-dimensional palette index is no longer enough. 
 		Each type will have its own palette strip, so I added a second dimension to the palette texture, corresponding to the 8 
-		possible block types, keeping the original bottom row as "unassigned" for good measure. 
+		possible block types, keeping the original bottom row unassigned for good measure (type index 0). 
 	</p>
 	
-	<p>Because "decorate" mode doesn't alter the rendering based on block type, the original palette strip is simply repeated 
-		along the new 2D palette's y-axis. 
+	<p>Because <strong>Decorate</strong> mode doesn't alter the rendering based on block type, the original palette strip is simply 
+		repeated along the new 2D palette's y-axis. 
 	</p>
 </div>
 
@@ -86,10 +86,9 @@
 </div>
 
 <div class="paragraph-container">
-	<p> Now, this texture can be modified on a per-row basis corresponding to each specific block type, affecting the 
-		way individual types are rendered (without the need for a different shader or multiple material instances). I 
-		have more detailed explanations in the "build" and "configure" sections, but first let's take a look at the 
-		fragment shader to clarify a few details.
+	<p> Now, this texture can be modified on a per-row basis corresponding to each specific block type, affecting the way 
+		individual types are rendered (without the need for a different shader or multiple material instances). Let's take 
+		a look at the fragment shader to clarify a few details before looking at the palette transition examples.
 	</p>
 </div>
 
@@ -112,20 +111,19 @@ fixed4 frag(v2f i) : SV_Target
 		</div>
 		<div class="separator" style="border-color: whitesmoke;"></div>
 		<div class="label-container footer">
-			<p>The fragment shader. The _BlockColor property takes advantage of GPU instancing to avoid extra batches. 
-				In retrospect, I could've precalculated and saved the UV y-coordinate rather than _BlockColor, as everything 
-				but _BlockColor was a constant for my purposes. 
+			<p>The fragment shader. The <code>_BlockColor</code> property takes advantage of GPU instancing to avoid extra 
+				batches. 
 			</p>
 		</div>
 	</div>
 </div>
 
 <div class="paragraph-container">
-	<p>In the shader, "_MainTex" refers to the 9-pixel high palette texture, and "_BlockColor" to the assigned block type. 
-		You may have thought the use of UV coordinates was a bit strange, and you'd be right. 
+	<p>In the shader, <code>_MainTex</code> refers to the 9-pixel high palette texture, and <code>_BlockColor</code> to the 
+		assigned block type. You may have thought the use of UV coordinates was a bit strange, and you'd be right. 
 		Yep, every "pixel" of user art is rendered as a pair of triangles, mapped to UV coordinates offset along the y-axis by 
-		_BlockColor. That each tile is composed of a dense mesh like this is a relic of Bloxels' 2.5D origins. The core tech 
-		here could benefit a lot from Unity's recently improved texture APIs. 
+		<code>_BlockColor</code>. That each tile is composed of a dense mesh like this is a relic of Bloxels' 2.5D origins. The 
+		core tech here could benefit a lot from Unity's recently improved texture APIs. 
 	</p>
 </div>
 
@@ -137,7 +135,7 @@ fixed4 frag(v2f i) : SV_Target
 			<img src="images/block-tools.png" />
 		</div>
 		<div class="label-container footer">
-			<p>Screenshot from Build mode (cropped).</p>
+			<p>Screenshot from <strong>Build</strong> mode (cropped).</p>
 		</div>
 	</div>
 </div>
@@ -154,8 +152,8 @@ fixed4 frag(v2f i) : SV_Target
 <div class="figure-container">
 	<div class="figure">
 		<div class="label-container header">
-			<p>An example transition between the "decorate" and "build" contexts. Index labels correspond to the rows used by 
-				the shader for each of the 3 tile examples. 
+			<p>An example transition between the <strong>Decorate</strong> and <strong>Build</strong> contexts. Index labels 
+				correspond to the rows used by the shader for each of the 3 tile examples. 
 			</p>
 		</div>
 		<div class="image-container">
@@ -181,9 +179,9 @@ fixed4 frag(v2f i) : SV_Target
 </div>
 
 <div class="paragraph-container">
-	<p>When the "build" tab is selected, the 2D palette texture from the tiles' shared material is animated as shown in the 
-		figure above. Since all tiles share the same material instance, there is no need to access individual tile objects to
-		manipulate them. For the sake of completeness, See below for the code that animates the texture transitions. 
+	<p>When the <strong>Build</strong> tab is selected, the 2D palette texture from the tiles' shared material is animated as 
+		shown in the figure above. Since all tiles share the same material instance, there is no need to access individual tile 
+		objects to manipulate them. For the sake of completeness, see below for the code that animates the texture transitions. 
 	</p>
 </div>
 
@@ -247,14 +245,14 @@ private void InterpolateColors(
 			<img src="images/config-tools.png" />
 		</div>
 		<div class="label-container footer">
-			<p>Screenshot from Config mode (cropped).</p>
+			<p>Screenshot from <strong>Config</strong> mode (cropped).</p>
 		</div>
 	</div>
 </div>
 
 <div class="paragraph-container">
-	<p>A few specific block types have unique configuration options. Each has its own popup menu, accessible via "config" mode. 
-		After selecting the config tab, all tiles that aren't configurable have their colors desaturated, while configurable 
+	<p>A few specific block types have unique configuration options. Each has its own popup menu, accessible via <strong>Config</strong> 
+		mode. After selecting the tab, all tiles that aren't configurable have their colors desaturated, while configurable 
 		tiles' original colors are preserved. In addition, each configurable tile gets an outline color-coded to its block type, 
 		making it obvious that it can be selected to open its settings menu. 
 	</p>
@@ -263,8 +261,8 @@ private void InterpolateColors(
 <div class="figure-container">
 	<div class="figure">
 		<div class="label-container header">
-			<p>An example transition between the "decorate" and "config" contexts. Index labels correspond to the rows used
-				by the shader for each of the 3 tile examples. </p>
+			<p>An example transition between the <strong>Decorate</strong> and <strong>Config</strong> contexts. Index labels 
+				correspond to the rows used by the shader for each of the 3 tile examples. </p>
 		</div>
 		<div class="image-container">
 			<img class="expand-width" src="images/decorate-base.png" draggable="false" />

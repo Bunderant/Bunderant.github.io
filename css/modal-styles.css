@@ -142,6 +142,7 @@
 }
 
 .image-container > img {
+	display: block;
 	width: 100%;
 }
 

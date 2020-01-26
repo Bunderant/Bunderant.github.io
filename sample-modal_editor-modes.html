@@ -132,8 +132,8 @@ fixed4 frag(v2f i) : SV_Target
 <div class="figure-container">
 	<div class="figure">
 		<div class="label-container header">
-			<p>An example transition between the "decorate" and "build" contexts. Numbered indexes correspond to the rows used by 
-				the shader for each tile shown. 
+			<p>An example transition between the "decorate" and "build" contexts. Index labels correspond to the rows used by 
+				the shader for each of the 3 tile examples. 
 			</p>
 		</div>
 		<div class="image-container">
@@ -230,15 +230,25 @@ private void InterpolateColors(
 <div class="figure-container">
 	<div class="figure">
 		<div class="label-container header">
-			<p>An example transition between the "decorate" and "config" contexts. </p>
+			<p>An example transition between the "decorate" and "config" contexts. Index labels correspond to the rows used
+				by the shader for each of the 3 tile examples. </p>
 		</div>
 		<div class="image-container">
 			<img class="expand-width" src="images/decorate-base.png" draggable="false" />
 			<img class="expand-width fade-cycle-overlay" src="images/decorate-to-config-cover.png" draggable="false" />
+			<div class="row-border orange"></div>
+			<div class="row-border green"></div>
+			<div class="row-border purple"></div>
+			<div class="index-label cell purple"><p>6</p></div>
+			<div class="index-label cell green"><p>4</p></div>
+			<div class="index-label cell orange"><p>2</p></div>
+			<div class="index-label tile purple"><p>6</p></div>
+			<div class="index-label tile green"><p>4</p></div>
+			<div class="index-label tile orange"><p>2</p></div>
 		</div>
 		<div class="label-container footer">
 			<p>TOP: The shader lookup texture, with labeled rows corresponding to the given tile examples.<br/>
-				BOTTOM: Three tiles with the same art applied, but different underlying block types. From left to right: 
+				BOTTOM: Three tiles with the same art applied, but different block types. From left to right: 
 				orange (movable, idx 2), green (terrain, idx 4), and purple (enemy, idx 6).
 			</p>
 		</div>

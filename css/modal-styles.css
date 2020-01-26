@@ -228,7 +228,6 @@
 	height: 5.882%;
 
 	border-bottom: 2px dashed whitesmoke;
-	border-right: 2px dashed whitesmoke;
 }
 
 #modal-panel .figure-container .row-border.orange {
@@ -316,6 +315,12 @@
 	}
 	100% {
 		opacity: 1;
+	}
+}
+
+@media only screen and (min-width: 0px) and (max-width: 400px) {
+	#modal-panel .figure-container .row-border {
+		border-bottom-width: 1px;
 	}
 }
 

@@ -94,6 +94,10 @@ p > a:active {
 	border-style: none;
 }
 
+#splash h1 {
+	text-shadow: 0.1em 0.1em 0em black;
+}
+
 #shipped h1 {
 	text-shadow: 0.075em 0.075em 0em blue;
 }
@@ -134,8 +138,6 @@ p > a:active {
 }
 
 #splash h1 {
-	text-shadow: 0em 0em 0.2em black;
-
 	padding: 0;
 	color: whitesmoke;
 	text-align: center;

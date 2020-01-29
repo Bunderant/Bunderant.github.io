@@ -94,10 +94,6 @@ p > a:active {
 	border-style: none;
 }
 
-#splash h1 {
-	text-shadow: 0.1em 0.1em 0em black;
-}
-
 #shipped h1 {
 	text-shadow: 0.075em 0.075em 0em blue;
 }
@@ -138,6 +134,8 @@ p > a:active {
 }
 
 #splash h1 {
+	text-shadow: 0.1em 0.1em 0em black;
+	
 	padding: 0;
 	color: whitesmoke;
 	text-align: center;
@@ -411,6 +409,11 @@ a.tiled-link {
 
 	#splash {
 		height: 300px;
+	}
+
+	#splash video {
+		/* Makes sure the top and bottom of the video aren't overflowing too much */
+		min-width: 660px;
 	}
 }
 

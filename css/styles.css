@@ -435,6 +435,10 @@ a.tiled-link {
 		width: 100%;
 	}
 
+	#skills .tiled-link h2 {
+		text-align: left;
+	}
+
 	#shipped .grid-item {
 		height: 400px;
 	}

@@ -21,10 +21,6 @@
 	text-shadow: 0.125em 0.125em 0em black;
 }
 
-#samples h2 {
-	z-index: 1;
-}
-
 #samples .grid-item video {
 	width: 100%;
 }

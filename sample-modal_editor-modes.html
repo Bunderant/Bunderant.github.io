@@ -13,7 +13,7 @@
 		exclusive set of tools, each paired with a clear rendering transformation over the editor viewport. 
 	</p>
 	<p>There are three primary actions involved in creating a Bloxels game: <strong>Build</strong>, <strong>Decorate</strong>, 
-		and <strong>Configure</strong>. Each action has a different priority to communicate visually, but the game map needs 
+		and <strong>Config</strong>. Each action has a different priority to communicate visually, but the game map needs 
 		to be displayed in a recognizable way regardless of context. 
 	</p>
 </div>
@@ -26,7 +26,7 @@
 			<img src="images/decorate-tools.png" />
 		</div>
 		<div class="label-container footer">
-			<p>Screenshot from <strong>Decorate</strong> mode (cropped).</p>
+			<p><strong>Decorate</strong> mode.</p>
 		</div>
 	</div>
 </div>
@@ -69,7 +69,7 @@
 		possible block types, keeping the original bottom row unassigned for good measure (type index 0). 
 	</p>
 	
-	<p>Because <strong>Decorate</strong> mode doesn't alter the rendering based on block type, the original palette strip is simply 
+	<p>Because <strong>Decorate</strong> doesn't alter the rendering based on block type, the original palette strip is simply 
 		repeated along the new 2D palette's y-axis. 
 	</p>
 </div>
@@ -135,7 +135,7 @@ fixed4 frag(v2f i) : SV_Target
 			<img src="images/block-tools.png" />
 		</div>
 		<div class="label-container footer">
-			<p>Screenshot from <strong>Build</strong> mode (cropped).</p>
+			<p><strong>Build</strong> mode.</p>
 		</div>
 	</div>
 </div>
@@ -152,8 +152,8 @@ fixed4 frag(v2f i) : SV_Target
 <div class="figure-container">
 	<div class="figure">
 		<div class="label-container header">
-			<p>An example transition between the <strong>Decorate</strong> and <strong>Build</strong> contexts. Index labels 
-				correspond to the rows used by the shader for each of the 3 tile examples. 
+			<p>An example transition between <strong>Decorate</strong> and <strong>Build</strong>. Index labels correspond to the 
+				rows used by the shader for each of the 3 tile examples. 
 			</p>
 		</div>
 		<div class="image-container">
@@ -170,7 +170,7 @@ fixed4 frag(v2f i) : SV_Target
 			<div class="index-label tile orange"><p>2</p></div>
 		</div>
 		<div class="label-container footer">
-			<p>TOP: The shader lookup texture, with outlined rows corresponding to the tile examples below.<br/>
+			<p>TOP: The shader lookup texture.<br/>
 				BOTTOM: Three tiles with the same art applied, but different block types. From left to right: 
 				orange (movable, idx 2), green (terrain, idx 4), and purple (enemy, idx 6). 
 			</p>
@@ -237,7 +237,7 @@ private void InterpolateColors(
 	</p>
 </div>
 
-<h1>Configure</h1>
+<h1>Config</h1>
 
 <div class=figure-container>
 	<div class="figure">
@@ -245,14 +245,14 @@ private void InterpolateColors(
 			<img src="images/config-tools.png" />
 		</div>
 		<div class="label-container footer">
-			<p>Screenshot from <strong>Config</strong> mode (cropped).</p>
+			<p><strong>Config</strong> mode.</p>
 		</div>
 	</div>
 </div>
 
 <div class="paragraph-container">
-	<p>A few specific block types have unique configuration options. Each has its own popup menu, accessible via <strong>Config</strong> 
-		mode. After selecting the tab, all tiles that aren't configurable have their colors desaturated, while configurable 
+	<p>A few specific block types have unique configuration options. Each has its own popup menu, accessible via <strong>Config</strong>. 
+		After selecting the tab, all tiles that aren't configurable have their colors desaturated, while configurable 
 		tiles' original colors are preserved. In addition, each configurable tile gets an outline color-coded to its block type, 
 		making it obvious that it can be selected to open its settings menu. 
 	</p>
@@ -261,8 +261,8 @@ private void InterpolateColors(
 <div class="figure-container">
 	<div class="figure">
 		<div class="label-container header">
-			<p>An example transition between the <strong>Decorate</strong> and <strong>Config</strong> contexts. Index labels 
-				correspond to the rows used by the shader for each of the 3 tile examples. </p>
+			<p>An example transition between <strong>Decorate</strong> and <strong>Config</strong>. Index labels correspond to the rows 
+				used by the shader for each of the 3 tile examples. </p>
 		</div>
 		<div class="image-container">
 			<img class="expand-width" src="images/decorate-base.png" draggable="false" />
@@ -278,7 +278,7 @@ private void InterpolateColors(
 			<div class="index-label tile orange"><p>2</p></div>
 		</div>
 		<div class="label-container footer">
-			<p>TOP: The shader lookup texture, with labeled rows corresponding to the given tile examples.<br/>
+			<p>TOP: The shader lookup texture.<br/>
 				BOTTOM: Three tiles with the same art applied, but different block types. From left to right: 
 				orange (movable, idx 2), green (terrain, idx 4), and purple (enemy, idx 6).
 			</p>

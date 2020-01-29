@@ -412,6 +412,11 @@ a.tiled-link {
 	#splash {
 		height: 300px;
 	}
+
+	#splash video {
+		/* Makes sure the top and bottom of the video aren't overflowing too much */
+		min-width: 660px;
+	}
 }
 
 /* tablet styles */

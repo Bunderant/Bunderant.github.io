@@ -12,6 +12,10 @@ function initializeModalListeners() {
 	for (let i = 0; i < triggerElements.length; i++) {
 		const element = triggerElements[i];
 
+		if (element.classList.contains("coming-soon")) {
+			continue;
+		}
+
 		dict["#" + element.id] = function () {
 			showModal();
 			modalPanel.scrollTop = 0;

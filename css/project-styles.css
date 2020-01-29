@@ -29,5 +29,7 @@
 	text-shadow: 0em 0em 0.5em black;
 	top: 75%;
 
+	-webkit-transition: top 0.2s;
+
 	transition: top 0.2s;
 }

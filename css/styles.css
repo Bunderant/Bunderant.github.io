@@ -39,7 +39,7 @@ h2 {
 
 h1 {
 	text-transform: uppercase;
-	text-shadow: 0.075em 0.075em 0em blue;
+
 }
 
 p {
@@ -92,6 +92,14 @@ p > a:active {
 #footer {
 	border-bottom: 0px;
 	border-style: none;
+}
+
+#splash h1 {
+	text-shadow: 0.1em 0.1em 0em black;
+}
+
+#shipped h1 {
+	text-shadow: 0.75em 0.75em 0em blue;
 }
 
 .section h1 {
@@ -237,8 +245,12 @@ a.tiled-link {
 }
 
 .tiled-link:hover h2 {
+	text-shadow: none;
+	color: black;
+
 	top: 50%;
-	transition: top 0.2s;
+
+	transition: color 1.2s, top 0.2s;
 }
 
 .tiled-link:hover .scale-container {
@@ -248,55 +260,60 @@ a.tiled-link {
 }
 
 .tiled-link:hover .overlay {
-	opacity: 0.6;
+	opacity: 0.5;
 	transition: opacity 0.2s;
 }
 
-.tiled-link > h2::before {
+.tiled-link:not(.coming-soon) > h2::before {
 	position: absolute;
 	z-index: -1;
 	content: "";
 
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
+	top: -10%;
+	left: -0.25%;
+	
+	width: 100.5%;
+	height: 120%;
 
-	background-color: black;
+	background: linear-gradient(to bottom, transparent 0%, whitesmoke 10%, whitesmoke 90%, transparent 100%);
 
 	opacity: 0;
 	transition: opacity 0.2s;
 }
 
-.tiled-link:hover > h2::before {
+.tiled-link:hover:not(.coming-soon) > h2::before {
 	opacity: 1;
 	transition: opacity 0.2s;
 }
 
 .tiled-link.coming-soon > h2::after {
+	text-shadow: none;
+
 	position: absolute;
-	content: "Coming Soon!";
+	content: "Coming Soon";
 
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
 
-	top: 0;
-	left: 0;
+	top: -10%;
+	left: -0.25%;
 	
-	width: 100%;
-	height: 100%;
+	width: 100.5%;
+	height: 120%;
 
-	background-color: black;
+	background: linear-gradient(to bottom, transparent 0%, whitesmoke 10%, whitesmoke 90%, transparent 100%);
 
 	opacity: 0;
 
-	transition: opacity 0.2s;
+	transition: opacity 0.2s, color 0.2s;
 }
 
 .tiled-link.coming-soon:hover > h2::after {
 	opacity: 1;
-	transition: opacity 0.2s;
+	color: black;
+
+	transition: opacity 0.2s, color 1.2s;
 }
 
 .overlay {
@@ -333,7 +350,7 @@ a.tiled-link {
 .grid-item-content-wrapper > h2 {
 	color: whitesmoke;
 	text-transform: uppercase;
-	text-shadow: 0.125em 0.125em 0em blue;
+	text-shadow: 0.125em 0.125em 0em black;
 
 	text-align: center;
 
@@ -345,6 +362,8 @@ a.tiled-link {
 	transform: translate(-50%, -50%);
 
 	padding: 15px;
+
+	transition: color 0.2s;
 }
 
 #bg-bloxels-edu {

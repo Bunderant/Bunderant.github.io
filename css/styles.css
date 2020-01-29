@@ -99,7 +99,7 @@ p > a:active {
 }
 
 #shipped h1 {
-	text-shadow: 0.75em 0.75em 0em blue;
+	text-shadow: 0.075em 0.075em 0em blue;
 }
 
 .section h1 {

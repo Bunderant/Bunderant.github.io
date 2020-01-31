@@ -186,6 +186,13 @@
 	border: 4px solid black;
 }
 
+#modal-panel .figure > video {
+	height: 100%;
+	padding: 0;
+
+	background-color: black;
+}
+
 .figure > .label-container {
 	width: 100%;
 

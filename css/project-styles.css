@@ -25,3 +25,9 @@
 
 	transition: top 0.2s;
 }
+
+p > code {
+	background-color: black;
+	color: whitesmoke;
+	padding: 2px;
+}

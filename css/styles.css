@@ -6,10 +6,7 @@
 
 .no-select {
 	-webkit-tap-highlight-color: transparent; /* Not auto-generated, needed to prevent highlighting on Chrome mobile. */
-	-webkit-user-select: none;
-	   -moz-user-select: none;
-	    -ms-user-select: none;
-	        user-select: none;
+	user-select: none;
 }
 
 .mobile-breaking-space::after {
@@ -57,14 +54,11 @@ p > a, p > a:link, p > a:visited {
 	color: inherit;
 
 	/* Underline transition fanciness inspired by http://pleeease.io */
-	background-image: -webkit-gradient(linear, left top, left bottom, from(blue), to(blue));
 	background-image: linear-gradient(blue, blue);
 	background-repeat: no-repeat;
 	background-position: bottom;
 	background-size: 100% 3px;
 	padding: 0 4px;
-
-	-webkit-transition: background-size .2s, color .2s;
 
 	transition: background-size .2s, color .2s;
 }
@@ -72,8 +66,6 @@ p > a, p > a:link, p > a:visited {
 p > a:hover {
 	background-size: 100% 100%;
 	color: whitesmoke;
-
-	-webkit-transition: background-size .2s, color .2s;
 
 	transition: background-size .2s, color .2s;
 }
@@ -138,8 +130,7 @@ p > a:active {
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	-webkit-transform: translate(-50%, -50%);
-	        transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
 }
 
 #splash h1 {
@@ -170,11 +161,9 @@ p > a:active {
 }
 
 .grid-container {
-	display: -webkit-box;
 	display: flex;
 	flex-wrap: wrap;
-	-webkit-box-pack: center;
-	        justify-content: center;
+	justify-content: center;
 	padding: 10px;
 }
 
@@ -202,15 +191,10 @@ p > a:active {
 .letter {
 	display: inline-block;
 
-	-webkit-animation-duration: 2000ms;
-
-	        animation-duration: 2000ms;
-	-webkit-animation-name: bounce;
-	        animation-name: bounce;
-	-webkit-animation-timing-function: ease-out;
-	        animation-timing-function: ease-out;
-	-webkit-animation-iteration-count: infinite;
-	        animation-iteration-count: infinite;
+	animation-duration: 2000ms;
+	animation-name: bounce;
+	animation-timing-function: ease-out;
+	animation-iteration-count: infinite;
 }
 
 #skills .grid-item {
@@ -240,32 +224,20 @@ a.tiled-link {
 	background-color: whitesmoke;
 	box-shadow: 6px 6px 6px black;
 
-	-webkit-transition: outline-width 0.2s, box-shadow 0.2s;
-
 	transition: outline-width 0.2s, box-shadow 0.2s;
 }
 
 .tiled-link .scale-container {
 	height: 100%;
 
-	-webkit-transform: scale(1.0);
-
-	        transform: scale(1.0);
-	
-	-webkit-transition: -webkit-transform 0.2s;
-	
-	transition: -webkit-transform 0.2s;
+	transform: scale(1.0);
 	
 	transition: transform 0.2s;
-	
-	transition: transform 0.2s, -webkit-transform 0.2s;
 }
 
 .tiled-link:hover {
 	outline: 6px solid whitesmoke;
 	box-shadow: 9px 9px 6px black;
-
-	-webkit-transition: outline-width 0.2s, box-shadow 0.2s;
 
 	transition: outline-width 0.2s, box-shadow 0.2s;
 }
@@ -280,27 +252,17 @@ a.tiled-link {
 
 	top: 50%;
 
-	-webkit-transition: color 1.2s, top 0.2s;
-
 	transition: color 1.2s, top 0.2s;
 }
 
 .tiled-link:hover .scale-container {
-	-webkit-transform: scale(1.2);
-	        transform: scale(1.2);
-	
-	-webkit-transition: -webkit-transform 0.2s;
-	
-	transition: -webkit-transform 0.2s;
+	transform: scale(1.2);
 	
 	transition: transform 0.2s;
-	
-	transition: transform 0.2s, -webkit-transform 0.2s;
 }
 
 .tiled-link:hover .overlay {
 	opacity: 0.5;
-	-webkit-transition: opacity 0.2s;
 	transition: opacity 0.2s;
 }
 
@@ -315,18 +277,14 @@ a.tiled-link {
 	width: 100.5%;
 	height: 120%;
 
-	background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(10%, whitesmoke), color-stop(90%, whitesmoke), to(transparent));
-
 	background: linear-gradient(to bottom, transparent 0%, whitesmoke 10%, whitesmoke 90%, transparent 100%);
 
 	opacity: 0;
-	-webkit-transition: opacity 0.2s;
 	transition: opacity 0.2s;
 }
 
 .tiled-link:hover:not(.coming-soon) > h2::before {
 	opacity: 1;
-	-webkit-transition: opacity 0.2s;
 	transition: opacity 0.2s;
 }
 
@@ -336,13 +294,9 @@ a.tiled-link {
 	position: absolute;
 	content: "Coming Soon";
 
-	display: -webkit-inline-box;
-
 	display: inline-flex;
-	-webkit-box-align: center;
-	        align-items: center;
-	-webkit-box-pack: center;
-	        justify-content: center;
+	align-items: center;
+	justify-content: center;
 
 	top: -10%;
 	left: -0.25%;
@@ -350,13 +304,9 @@ a.tiled-link {
 	width: 100.5%;
 	height: 120%;
 
-	background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(10%, whitesmoke), color-stop(90%, whitesmoke), to(transparent));
-
 	background: linear-gradient(to bottom, transparent 0%, whitesmoke 10%, whitesmoke 90%, transparent 100%);
 
 	opacity: 0;
-
-	-webkit-transition: opacity 0.2s, color 0.2s;
 
 	transition: opacity 0.2s, color 0.2s;
 }
@@ -365,8 +315,6 @@ a.tiled-link {
 	opacity: 1;
 	color: black;
 
-	-webkit-transition: opacity 0.2s, color 1.2s;
-
 	transition: opacity 0.2s, color 1.2s;
 }
 
@@ -374,8 +322,7 @@ a.tiled-link {
 	position: absolute;
 	left: 50%;
 	top: 50%;
-	-webkit-transform: translate(-50%, -50%);
-	        transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
 
 	width: 100%;
 	height: 100%;
@@ -384,15 +331,7 @@ a.tiled-link {
 
 	opacity: 0;
 
-	-webkit-transition: opacity 0.2s;
-
 	transition: opacity 0.2s;
-}
-
-@-webkit-keyframes blinker {
-	50% {
-		opacity: 0;
-	}
 }
 
 @keyframes blinker {
@@ -407,8 +346,7 @@ a.tiled-link {
 	position: relative;
 	left: 50%;
 	top: 50%;
-	-webkit-transform: translate(-50%, -50%);
-	        transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
 }
 
 .grid-item-content-wrapper > h2 {
@@ -423,12 +361,9 @@ a.tiled-link {
 
 	left: 50%;
 	top: 50%;
-	-webkit-transform: translate(-50%, -50%);
-	        transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
 
 	padding: 15px;
-
-	-webkit-transition: color 0.2s;
 
 	transition: color 0.2s;
 }
@@ -453,20 +388,12 @@ a.tiled-link {
 	background-image: url(../images/figure-drawing-cover.JPG);
 }
 
-@-webkit-keyframes bounce {
-	0% { -webkit-transform: translateY(0); transform: translateY(0); }
-	10% { -webkit-transform: translateY(2px); transform: translateY(2px); }
-	20% { -webkit-transform: translateY(-4px); transform: translateY(-4px); }
-	30% { -webkit-transform: translateY(2px); transform: translateY(2px); }
-	40% { -webkit-transform: translateY(0); transform: translateY(0); }
-}
-
 @keyframes bounce {
-	0% { -webkit-transform: translateY(0); transform: translateY(0); }
-	10% { -webkit-transform: translateY(2px); transform: translateY(2px); }
-	20% { -webkit-transform: translateY(-4px); transform: translateY(-4px); }
-	30% { -webkit-transform: translateY(2px); transform: translateY(2px); }
-	40% { -webkit-transform: translateY(0); transform: translateY(0); }
+	0% { transform: translateY(0); }
+	10% { transform: translateY(2px); }
+	20% { transform: translateY(-4px); }
+	30% { transform: translateY(2px); }
+	40% { transform: translateY(0); }
 }
 
 /* phone/mobile styles */

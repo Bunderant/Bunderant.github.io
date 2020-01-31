@@ -94,6 +94,15 @@
 	flex-wrap: wrap;
 }
 
+#modal-panel .standalone-image {
+	display: block;
+	padding: 10px 0;
+	width: 100%;
+	left: 50%; transform:
+	translateX(-50%);
+	position: relative;
+}
+
 #modal-panel div:nth-last-of-type(2) {
 	/* Trims the bottom padding off the last content div to avoid interference with EOF icon. */
 	padding-bottom: 0px;

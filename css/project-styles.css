@@ -1,15 +1,9 @@
-.code-sample {
-	width: 100%;
-	overflow: auto;
-}
-
-#history p {
+.section > p:last-child {
 	padding-bottom: 20px;
 }
 
 #my-role {
 	background-color: skyblue;
-	padding-bottom: 20px;
 }
 
 #samples {

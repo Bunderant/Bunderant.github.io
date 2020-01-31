@@ -1,0 +1,74 @@
+<h1>Character<span class="mobile-breaking-space"></span>Animation</h1>
+
+<div class=figure-container>
+	<div class="figure">
+		<div class="image-container">
+			<img src="images/star-wars/boba-and-han.jpg" />
+		</div>
+	</div>
+</div>
+
+<div class="paragraph-container">
+	<p>Since it ended up being the most complex, let's talk about Boba Fett's state machine. Over the course of development, 
+		we'd occasionally check in with Lucasfilm for approvals. This often led to some unexpected mandates. For instance, Boba's 
+		helmet antenna was required to be on the right side of his helmet, meaning I could no longer simply flip the sprite to face 
+		left or right for any of his animations. I'm eternally grateful similar observations weren't made regarding our 
+		melee characters' dominant hands. That said, I would have been really excited about such attention to detail given more time. 
+	</p>
+</div>
+
+<h1>State Transitions</h1>
+
+<div class=figure-container>
+	<div class="figure">
+		<div class="image-container">
+			<img src="images/star-wars/boba-controller_base.jpg" />
+		</div>
+		<div class="label-container footer">
+			<p>The base layer of <strong>Boba</strong>'s Mecanim state machine.</p>
+		</div>
+	</div>
+</div>
+
+<div class="paragraph-container">
+	<p>Attack animation states were called explicitly via code, but transitions among states were mostly handed by conditions on 
+		animation parameters. These conditions were defined via Unity's visual tools in the editor, with the parameters updated by 
+		control input and each character's physics data. Each state is a container for blend trees swapping the animation clips on 
+		a more granular level. 
+	</p>
+</div>
+
+<div class=figure-container>
+	<div class="figure">
+		<div class="image-container">
+			<img src="images/star-wars/boba-controller_shoot.jpg" />
+		</div>
+		<div class="label-container footer">
+			<p>The <strong>shoot</strong> sub-layer.</p>
+		</div>
+	</div>
+</div>
+
+<div class="paragraph-container">
+	<p>Blend trees operated on whether Boba was on the ground, his vertical velocity, and which direction he was facing. 
+		When Mecanim transitions between clips via a blend tree, the time lapsed in one animation clip carries over to the next. 
+		For example, if you were shoot your blaster just before a transition from rising to falling, the shooting animation during 
+		the rise would be completed by the animation for a shot while falling. Building our state machines this way helped avoid
+		jarring transitions and interruptions. 
+	</p>
+</div>
+
+<div class=figure-container>
+	<div class="figure">
+		<video autoplay muted loop preload="auto">
+			<source	src="videos/star-wars-boba-demo.mp4" type="video/mp4" />
+		</video>
+		<div class="label-container footer">
+			<p>The end result.</p>
+		</div>
+	</div>
+</div>
+
+<div id="EOF">
+	<div class="image-container"></div>
+</div>

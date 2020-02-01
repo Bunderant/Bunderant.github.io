@@ -89,6 +89,53 @@ p > a:active {
 	background-color: whitesmoke;
 }
 
+#history > p:first-of-type {
+	padding-bottom: 20px;
+}
+
+.video-wrapper {
+	max-width: 100%;
+	position: relative;
+
+	left: 50%;
+	transform: translateX(-50%);
+
+	background-color: black;
+}
+
+.section .video-wrapper {
+	width: 80%;
+}
+
+.video-wrapper::after {
+	content: '';
+	display: block;
+	padding-top: 56.25%; /* 16:9 */
+}
+
+.video-wrapper .embedded-video {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 100%;
+	height: 100%;
+}
+
+.section .video-wrapper {
+	max-width: 100%;
+	min-width: 80%;
+}
+
+.embedded-video {
+	max-width: 100%;
+	min-width: 80%;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+
+	outline: 3px solid black;
+}
+
 #footer {
 	border-bottom: 0px;
 	border-style: none;
@@ -414,6 +461,10 @@ a.tiled-link {
 	#splash video {
 		/* Makes sure the top and bottom of the video aren't overflowing too much */
 		min-width: 660px;
+	}
+
+	.section .video-wrapper {
+		width: calc(100% - 40px); /* Padding is behaving really strangely, so this'll have to do. */
 	}
 }
 

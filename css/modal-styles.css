@@ -92,9 +92,10 @@
 
 	display: flex;
 	flex-wrap: wrap;
+	flex-direction: column;
 }
 
-#modal-panel .standalone-image {
+#modal-panel > .image-container > img {
 	display: block;
 	padding: 10px 0;
 	width: 100%;

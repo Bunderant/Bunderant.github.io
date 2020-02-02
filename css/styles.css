@@ -416,23 +416,23 @@ a.tiled-link {
 }
 
 #bg-bloxels-edu {
-	background-image: url(../images/project-covers/bloxels-edu-tinted.png);
+	background-image: url(../images/project-covers/bloxels-edu-1x.png);
 }
 
 #bg-star-wars {
-	background-image: url(../images/project-covers/star-wars-tinted.png);
+	background-image: url(../images/project-covers/star-wars-1x.png);
 }
 
 #bg-bloxels-builder {
-	background-image: url(../images/project-covers/bloxels-builder-tinted.png);
+	background-image: url(../images/project-covers/bloxels-builder-1x.png);
 }
 
 #bg-adventure-time {
-	background-image: url(../images/project-covers/adventure-time-tinted.png);
+	background-image: url(../images/project-covers/adventure-time-1x.png);
 }
 
 #bg-figure-drawing {
-	background-image: url(../images/figure-drawing-cover.JPG);
+	background-image: url(../images/figure-drawing-cover-2x.JPG);
 }
 
 @keyframes bounce {

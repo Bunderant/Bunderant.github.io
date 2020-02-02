@@ -231,6 +231,10 @@ p > a:active {
 	background-position: 50% 50%; /* Centered so that scaling on hover won't affect position. */
 }
 
+#shipped .grid-item .background-image {
+	filter: brightness(70%) /* Helps the text stand out a bit better and differentiate from the splash video. */
+}
+
 .word {
 	white-space: nowrap;
 }

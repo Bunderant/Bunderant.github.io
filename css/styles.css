@@ -231,6 +231,10 @@ p > a:active {
 	background-position: 50% 50%; /* Centered so that scaling on hover won't affect position. */
 }
 
+#shipped .grid-item .background-image {
+	filter: brightness(70%) /* Helps the text stand out a bit better and differentiate from the splash video. */
+}
+
 .word {
 	white-space: nowrap;
 }
@@ -416,23 +420,23 @@ a.tiled-link {
 }
 
 #bg-bloxels-edu {
-	background-image: url(../images/project-covers/bloxels-edu-tinted.png);
+	background-image: url(../images/project-covers/bloxels-edu-1x.png);
 }
 
 #bg-star-wars {
-	background-image: url(../images/project-covers/star-wars-tinted.png);
+	background-image: url(../images/project-covers/star-wars-1x.png);
 }
 
 #bg-bloxels-builder {
-	background-image: url(../images/project-covers/bloxels-builder-tinted.png);
+	background-image: url(../images/project-covers/bloxels-builder-1x.png);
 }
 
 #bg-adventure-time {
-	background-image: url(../images/project-covers/adventure-time-tinted.png);
+	background-image: url(../images/project-covers/adventure-time-1x.png);
 }
 
 #bg-figure-drawing {
-	background-image: url(../images/figure-drawing-cover.JPG);
+	background-image: url(../images/figure-drawing-cover-2x.JPG);
 }
 
 @keyframes bounce {

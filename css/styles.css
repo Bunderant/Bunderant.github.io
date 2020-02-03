@@ -39,7 +39,6 @@ h2 {
 
 h1 {
 	text-transform: uppercase;
-
 }
 
 p {
@@ -173,7 +172,7 @@ p > a:active {
 	overflow: hidden;
 }
 
-#splash > * {
+#splash > video {
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -182,12 +181,37 @@ p > a:active {
 
 #splash h1 {
 	text-shadow: 0.1em 0.1em 0em black;
+	text-align: left;
 	
-	padding: 0;
+	padding: 10px 0 0 10px;
 	color: whitesmoke;
-	text-align: center;
 
-	min-width: 95%;
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	width: 100%;
+}
+
+#splash h1.sub-heading {
+	text-align: right;
+	font-size: 1.25em;
+
+	padding: 0;
+
+	top: auto;
+	left: auto;
+	bottom: 0;
+	right: 0;
+}
+
+#splash .decoration-fill {
+	display: block;
+	content: "";
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(to bottom, black 0%, transparent 10%, transparent 90%, black);
 }
 
 #splash video {
@@ -454,8 +478,18 @@ a.tiled-link {
 		white-space: pre;
 	}
 
-	h1 {
+	h1:not(#title) {
 		font-size: 1.5em;
+	}
+
+	#splash h1 {
+		padding:0;
+		top: 25%;
+		text-align: center;
+	}
+
+	#splash h1.sub-heading {
+		font-size: 1em;
 	}
 
 	#splash {

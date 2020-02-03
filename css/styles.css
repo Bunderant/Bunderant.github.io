@@ -79,6 +79,7 @@ p > a:active {
 }
 
 .section {
+	position: relative;
 	border-top: 0px;
 	border-bottom: 4px;
 	border-left: 0px;
@@ -203,13 +204,32 @@ p > a:active {
 	right: 0;
 }
 
-#splash .decoration-fill {
+.section > .decoration-fill {
 	display: block;
-	content: "";
-	position: relative;
+	position: absolute;
 	width: 100%;
 	height: 100%;
-	background: linear-gradient(to bottom, black 0%, transparent 10%, transparent 90%, black);
+	background: linear-gradient(to bottom, black 0%, transparent 30px, transparent calc(100% - 30px), black);
+}
+
+.section > .decoration-fill::after {
+	content: "";
+	display: none; /* Controlled by media queries. */
+	position: absolute;
+	left: 0;
+	height: 100%;
+	width: 30px;
+	background: linear-gradient(to right, black, transparent);
+}
+
+.section > .decoration-fill::before {
+	content: "";
+	display: none; /* Controlled by media queries. */
+	position: absolute;
+	right: 0;
+	height: 100%;
+	width: 30px;
+	background: linear-gradient(to left, black, transparent);
 }
 
 #splash video {
@@ -525,5 +545,10 @@ a.tiled-link {
 
 	#shipped .grid-item {
 		height: 400px;
+	}
+
+	.section > .decoration-fill::after,
+	.section > .decoration-fill::before {
+		display: block;
 	}
 }

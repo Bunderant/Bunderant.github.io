@@ -1,7 +1,10 @@
-window.addWordAndLetterClassesToText = addWordAndLetterClassesToText;
-document.addEventListener("DOMContentLoaded", initializeTileLinkTextAnimations);
+document.addEventListener("DOMContentLoaded", animateText);
 
-function initializeTileLinkTextAnimations() {
+function animateText() {
+	initializeTileLinkTextAnimations();
+}
+
+async function initializeTileLinkTextAnimations() {
 
 	const animatedTextElements = document.getElementsByClassName("animated-text");
 
@@ -10,11 +13,13 @@ function initializeTileLinkTextAnimations() {
 	const delayBetweenLetters = 50;
 	let initialDelay = 0;
 
-	for (let i = 0; i < animatedTextElements.length; i++) {
-		addWordAndLetterClassesToText(animatedTextElements[i], "h2");
+	for (let i = 0; i < animatedTextElements.length; i++)
+	{
+		let textElement = animatedTextElements[i];
+		await addWordAndLetterClassesToText(textElement);
 
 		let letterDelay = 0;
-		const letters = animatedTextElements[i].getElementsByClassName("letter");
+		const letters = textElement.getElementsByClassName("letter");
 		for (let letterIndex = 0; letterIndex < letters.length; letterIndex++) {
 			const letter = letters[letterIndex];
 			letter.setAttribute("style", "animation-delay: " + (initialDelay + letterDelay) + "ms");
@@ -27,7 +32,6 @@ function initializeTileLinkTextAnimations() {
 }
 
 function addWordAndLetterClassesToText(textElement) {
-
 	const startWordSpan = "<span class='word'>";
 	const startLetterSpan = "<span class='letter'>"
 	const endSpan = "</span>";
@@ -49,4 +53,6 @@ function addWordAndLetterClassesToText(textElement) {
 	}
 
 	textElement.innerHTML = generatedHtml;
+
+	return Promise.resolve(textElement);
 }

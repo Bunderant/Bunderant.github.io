@@ -256,15 +256,16 @@ p > a:active {
 }
 
 #home #home-link {
-	display: none; /* Hides the home link on the home page only. */
+	pointer-events: none;
+	opacity: 50%;
 }
 
 #home-link .icon {
-	background-image: url(../images/icon-home-blurred.png);
+	background-image: url(../images/icon-initials-blurred-white.png);
 }
 
 #home-link .icon-hover {
-	background-image: url(../images/icon-home-blurred-black.png);
+	background-image: url(../images/icon-initials-blurred-black.png);
 }
 
 #github-link .icon {

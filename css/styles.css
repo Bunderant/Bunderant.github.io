@@ -261,11 +261,11 @@ p > a:active {
 }
 
 #home-link .icon {
-	background-image: url(../images/icon-initials-blurred-white.png);
+	background-image: url(../images/icon-initials-v3-blurred.png);
 }
 
 #home-link .icon-hover {
-	background-image: url(../images/icon-initials-blurred-black.png);
+	background-image: url(../images/icon-initials-v3-blurred-black.png);
 }
 
 #github-link .icon {

@@ -180,40 +180,94 @@ p > a:active {
 	justify-content: flex-end;
 }
 
+#header .spacer {
+	flex-grow: 1;
+}
+
 #header > a {
 	display: block;
-	padding: 10px 10px 20px 0px;
+	position: relative;
 	height: 100%;
 	width: 60px;
 }
 
-#header > a:last-of-type {
-	padding-right: 0px;
+#header > a .backing,
+#header > a .icon,
+#header > a .icon-hover {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform:  translate(-50%, -50%);
 }
 
-.header-link {
+#header > a .icon,
+#header > a .icon-hover {
+	width: 40px;
+	height: 40px;
+
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center;
 	background-origin: content-box;
+}
+
+#header > a .backing {
+	border-width: 0px;
+
+	border-style: solid;
+	border-color: whitesmoke;
+	border-radius: 3px;
+
+	opacity: 0;
+	transition: border-width 0.2s, opacity 0.2s;
+}
+
+#header > a .icon {
 	filter: brightness(96.0784%); /* 245/255, to match whitesmoke color. */
 }
 
-#home #home-link {
-	display: none; /* hide home link on the home page */
+#header > a .icon-hover {
+	opacity: 0;
+	transition: opacity 0.2s;
 }
 
-#home-link {
-	justify-self: flex-start;
+#header > a:hover .backing {
+	opacity: 1;
+	border-width: 25px;
+	transition: border-width 0.2s, opacity 0.2s;
+}
+
+#header > a:hover .icon-hover {
+	opacity: 1;
+	transition: opacity 1.2s;
+}
+
+#home #home-link {
+	display: none; /* Hides the home link on the home page only. */
+}
+
+#home-link .icon {
 	background-image: url(../images/icon-home-blurred.png);
 }
 
-#github-link {
+#home-link .icon-hover {
+	background-image: url(../images/icon-home-blurred-black.png);
+}
+
+#github-link .icon {
 	background-image: url(../images/GitHub-Mark-Light-64px.png);
 }
 
-#linkedin-link {
+#github-link .icon-hover {
+	background-image: url(../images/GitHub-Mark-Dark-64px.png);
+}
+
+#linkedin-link .icon {
 	background-image: url(../images/LI-In-Bug.png);
+}
+
+#linkedin-link .icon-hover {
+	background-image: url(../images/LI-In-Bug-Black.png);
 }
 
 #splash {
@@ -439,7 +493,7 @@ a.tiled-link {
 	transition: opacity 0.2s, color 1.2s;
 }
 
-.overlay {
+.tiled-link .overlay {
 	position: absolute;
 	left: 50%;
 	top: 50%;

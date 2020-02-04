@@ -89,6 +89,10 @@ p > a:active {
 	background-color: whitesmoke;
 }
 
+#header.section {
+	border: none;
+}
+
 #history > p:first-of-type {
 	padding-bottom: 20px;
 }
@@ -154,7 +158,6 @@ p > a:active {
 	padding: 20px 20px 0 20px;
 }
 
-#header,
 #footer,
 #splash {
 	background-color: black;
@@ -163,6 +166,14 @@ p > a:active {
 #header,
 #footer {
 	height: 80px;
+}
+
+#header {
+	position: sticky;
+	top: 0;
+	z-index: 1;
+
+	background: linear-gradient(to top, transparent 0%, black 10px, black 100%);
 }
 
 #splash {

@@ -39,7 +39,6 @@ h2 {
 
 h1 {
 	text-transform: uppercase;
-
 }
 
 p {
@@ -57,15 +56,28 @@ p > a, p > a:link, p > a:visited {
 	background-image: linear-gradient(blue, blue);
 	background-repeat: no-repeat;
 	background-position: bottom;
-	background-size: 100% 3px;
-	padding: 0 4px;
+	background-size: 100% 2px;
+	padding: 0 2px;
 
 	transition: background-size .2s, color .2s;
+}
+
+#bio p > a, #bio p > a:link, #bio p > a:visited {
+	font-weight: bold;
+	text-shadow: none;
+	background-image: linear-gradient(whitesmoke, whitesmoke);
 }
 
 p > a:hover {
 	background-size: 100% 100%;
 	color: whitesmoke;
+
+	transition: background-size .2s, color .2s;
+}
+
+#bio p > a:hover {
+	background-size: 100% 100%;
+	color: black;
 
 	transition: background-size .2s, color .2s;
 }
@@ -80,6 +92,7 @@ p > a:active {
 }
 
 .section {
+	position: relative;
 	border-top: 0px;
 	border-bottom: 4px;
 	border-left: 0px;
@@ -87,6 +100,10 @@ p > a:active {
 	border-style: solid;
 	border-color: black;
 	background-color: whitesmoke;
+}
+
+#header.section {
+	border: none;
 }
 
 #history > p:first-of-type {
@@ -154,7 +171,6 @@ p > a:active {
 	padding: 20px 20px 0 20px;
 }
 
-#header,
 #footer,
 #splash {
 	background-color: black;
@@ -165,6 +181,108 @@ p > a:active {
 	height: 80px;
 }
 
+#header {
+	position: sticky;
+	top: 0;
+	z-index: 1;
+
+	background: linear-gradient(to top, transparent 0%, black 10px, black 100%);
+
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+}
+
+#header .spacer {
+	flex-grow: 1;
+}
+
+#header > a {
+	display: block;
+	position: relative;
+	height: 100%;
+	width: 60px;
+}
+
+#header > a .backing,
+#header > a .icon,
+#header > a .icon-hover {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform:  translate(-50%, -50%);
+}
+
+#header > a .icon,
+#header > a .icon-hover {
+	width: 40px;
+	height: 40px;
+
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-origin: content-box;
+}
+
+#header > a .backing {
+	border-width: 0px;
+
+	border-style: solid;
+	border-color: whitesmoke;
+	border-radius: 3px;
+
+	opacity: 0;
+	transition: border-width 0.2s, opacity 0.2s;
+}
+
+#header > a .icon {
+	filter: brightness(96.0784%); /* 245/255, to match whitesmoke color. */
+}
+
+#header > a .icon-hover {
+	opacity: 0;
+	transition: opacity 0.2s;
+}
+
+#header > a:hover .backing {
+	opacity: 1;
+	border-width: 25px;
+	transition: border-width 0.2s, opacity 0.2s;
+}
+
+#header > a:hover .icon-hover {
+	opacity: 1;
+	transition: opacity 1.2s;
+}
+
+#home #home-link {
+	display: none; /* Hides the home link on the home page only. */
+}
+
+#home-link .icon {
+	background-image: url(../images/icon-home-blurred.png);
+}
+
+#home-link .icon-hover {
+	background-image: url(../images/icon-home-blurred-black.png);
+}
+
+#github-link .icon {
+	background-image: url(../images/GitHub-Mark-Light-64px.png);
+}
+
+#github-link .icon-hover {
+	background-image: url(../images/GitHub-Mark-Dark-64px.png);
+}
+
+#linkedin-link .icon {
+	background-image: url(../images/LI-In-Bug.png);
+}
+
+#linkedin-link .icon-hover {
+	background-image: url(../images/LI-In-Bug-Black.png);
+}
+
 #splash {
 	height: 400px;
 	
@@ -173,7 +291,7 @@ p > a:active {
 	overflow: hidden;
 }
 
-#splash > * {
+#splash > video {
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -181,18 +299,46 @@ p > a:active {
 }
 
 #splash h1 {
-	text-shadow: 0.1em 0.1em 0em black;
-	
-	padding: 0;
 	color: whitesmoke;
+	text-shadow: 0.1em 0.1em 0em black;
 	text-align: center;
+	font-size: 2.25em;
+	
+	position: absolute;
+	top: 30%;
+	left: 0;
+	width: 100%;
+	padding: 0 10px 0 10px;
+}
 
-	min-width: 95%;
+#splash h1.sub-heading {
+	text-align: right;
+	font-size: 1.25em;
+
+	padding: 0 5px 5px 0;
+
+	top: initial;
+	left: initial;
+	bottom: 0;
+	right: 0;
 }
 
 #splash video {
 	min-width: 815px; /* prevents letterboxing on small screens */
 	width: 100%;
+}
+
+#home #splash video {
+	filter: brightness(70%);
+}
+
+#bio {
+	background-color: black;
+}
+
+#bio p {
+	color: whitesmoke;
+	padding: 20px;
 }
 
 #shipped {
@@ -369,7 +515,7 @@ a.tiled-link {
 	transition: opacity 0.2s, color 1.2s;
 }
 
-.overlay {
+.tiled-link .overlay {
 	position: absolute;
 	left: 50%;
 	top: 50%;
@@ -454,8 +600,12 @@ a.tiled-link {
 		white-space: pre;
 	}
 
-	h1 {
+	h1:not(#title) {
 		font-size: 1.5em;
+	}
+
+	#splash h1.sub-heading {
+		font-size: 1em;
 	}
 
 	#splash {

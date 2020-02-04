@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width initial-scale=1.0, maximum-scale=1.0" />
-		<title>Mark Agne</title>
+		<title>Mark Agne - Game Programmer</title>
 		<link rel="stylesheet" href="css/styles.css" />
 		<link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet" />
 		<link href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed&display=swap" rel="stylesheet">
@@ -14,7 +14,7 @@
 
 		<meta property="og:url" content="http://markagne.com" />
 		<meta property="og:type" content="website" />
-		<meta property="og:title" content="Mark Agne: An efficacious human being!" />
+		<meta property="og:title" content="Mark Agne: A game programmer." />
 		<meta property="og:description" content="I make video games. And art and music. And this. This is a portfolio site." />
 
 		<meta property="og:image" content="http://markagne.com/images/crusoe-outlined-large.png" />
@@ -34,11 +34,26 @@
 		});
 	</script>
 
-	<body>
+	<body id="home">
 		<div class="page">
 
 			<div id="header" class="section">
-				<!-- TODO: empty for now, but this should contain links to github and contact info (form?) -->
+				<a id="home-link" href="./index.html">
+					<div class="backing"></div>
+					<div class="icon"></div>
+					<div class="icon-hover"></div>
+				</a>
+				<div class="spacer"></div>
+				<a id="github-link" href="https://github.com/Bunderant" target="_blank">
+					<div class="backing"></div>
+					<div class="icon"></div>
+					<div class="icon-hover"></div>
+				</a>
+				<a id="linkedin-link" href="https://linkedin.com/in/mark-agne" target="_blank">
+					<div class="backing"></div>
+					<div class="icon"></div>
+					<div class="icon-hover"></div>
+				</a>
 			</div>
 
 			<div id="splash" class="section">
@@ -46,17 +61,21 @@
 				<video autoplay muted loop preload="auto" poster="images/home-splash-banner-cover.png">
 					<source src="videos/home-splash-banner.mp4" type="video/mp4" />
 				</video>
-				<h1>I'm a Game Programmer!</h1>
+				<h1 id="title">Mark Agne</h1>
+				<h1 class="sub-heading">(Programmer)</h1>
+			</div>
+
+			<div id="bio" class="section">
+				<p class="description">
+					Over these past five years, I worked full-time with some great people at 
+					<a href="http://www.projectpixelpress.com" target="_blank">Pixel Press</a> in St. Louis. While there, I helped ship four 
+					games made with <a href="http://www.unity.com" target="_blank">Unity</a>. I mainly worked on gameplay and rendering systems, 
+					optimization, markerless AR processes, and UX/UI. Continue on for a few details from all the games, listed newest-first below. 
+				</p>
 			</div>
 
 			<div id="shipped" class="section">
-				<h1>Shipped Titles</h1>
-				<p class="description">
-					For five years, I worked full-time with some great people at <a href="http://www.projectpixelpress.com">Pixel Press</a> in my
-					hometown of St. Louis. While there, I helped ship four titles made with <a href="http://www.unity.com">Unity</a>. Being part 
-					of a small team meant my responsibilities were all over the map. I was mainly building gameplay and rendering systems, iterating over 
-					UX and game design, co-piloting the "capture" AR processes for Bloxels physical products, and optimizing anything I could. 
-				</p>
+				<h1>Shipped Games</h1>
 				<div class="grid-container no-select">
 					<div class="grid-item">
 						<a class="grid-item-content-wrapper tiled-link" href="/bloxels-edu.html">
@@ -91,12 +110,12 @@
 			</div> <!-- end section shipped -->
 
 			<div id="skills" class="section">
-				<h1>Skills! (Unrequitted)</h1>
+				<h1>Skills (Unrequitted)</h1>
 				<p class="description">
-					Here you'll find a collection of relics from my often musical and sometimes arty past. I do love to draw, 
-					but don't put myself to the task often. On the other hand, since I first picked up a guitar, making music 
-					has been a constant for these past twenty some-odd years. 
-				</p>
+                    Here you'll find a collection of relics from my often musical and sometimes arty past. I do love to draw, 
+                    but don't put myself to the task often. On the other hand, since I first picked up a guitar, making music 
+                    has been a constant for these past twenty some-odd years. 
+                </p>
 				<div class="grid-container no-select">
 					<div class="grid-item">
 						<a id="figure-drawing-link" class="grid-item-content-wrapper tiled-link" href="http://markagne.crevado.com">

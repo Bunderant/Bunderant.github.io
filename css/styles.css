@@ -56,15 +56,28 @@ p > a, p > a:link, p > a:visited {
 	background-image: linear-gradient(blue, blue);
 	background-repeat: no-repeat;
 	background-position: bottom;
-	background-size: 100% 3px;
-	padding: 0 4px;
+	background-size: 100% 2px;
+	padding: 0 2px;
 
 	transition: background-size .2s, color .2s;
+}
+
+#bio p > a, #bio p > a:link, #bio p > a:visited {
+	font-weight: bold;
+	text-shadow: none;
+	background-image: linear-gradient(whitesmoke, whitesmoke);
 }
 
 p > a:hover {
 	background-size: 100% 100%;
 	color: whitesmoke;
+
+	transition: background-size .2s, color .2s;
+}
+
+#bio p > a:hover {
+	background-size: 100% 100%;
+	color: black;
 
 	transition: background-size .2s, color .2s;
 }
@@ -317,6 +330,15 @@ p > a:active {
 
 #home #splash video {
 	filter: brightness(70%);
+}
+
+#bio {
+	background-color: black;
+}
+
+#bio p {
+	color: whitesmoke;
+	padding: 20px;
 }
 
 #shipped {

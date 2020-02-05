@@ -178,7 +178,7 @@ p > a:active {
 
 #header,
 #footer {
-	height: 80px;
+	height: 70px;
 }
 
 #header {
@@ -200,7 +200,8 @@ p > a:active {
 #header > a {
 	display: block;
 	position: relative;
-	height: 100%;
+	top: 2px;
+	height: 60px;
 	width: 60px;
 }
 
@@ -256,15 +257,16 @@ p > a:active {
 }
 
 #home #home-link {
-	display: none; /* Hides the home link on the home page only. */
+	pointer-events: none;
+	opacity: 50%;
 }
 
 #home-link .icon {
-	background-image: url(../images/icon-home-blurred.png);
+	background-image: url(../images/icon-initials-v3-blurred.png);
 }
 
 #home-link .icon-hover {
-	background-image: url(../images/icon-home-blurred-black.png);
+	background-image: url(../images/icon-initials-v3-blurred-black.png);
 }
 
 #github-link .icon {

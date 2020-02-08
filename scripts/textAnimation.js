@@ -22,19 +22,13 @@ async function initializeTileLinkTextAnimations() {
 		const letters = textElement.getElementsByClassName("letter");
 		for (let letterIndex = 0; letterIndex < letters.length; letterIndex++) {
 			const letter = letters[letterIndex];
-			const delay = initialDelay + letterDelay;
-			await(addDelayToLetter(letter, delay));
+			letter.setAttribute("style", "animation-delay: " + (initialDelay + letterDelay) + "ms");
 			letterDelay += delayBetweenLetters;
 		}
 
 		initialDelay += delayBetweenLinks;
 		initialDelay = initialDelay % maxLinkDelay;
 	}
-}
-
-function addDelayToLetter(letter, delay) {
-	letter.setAttribute("style", "animation-delay: " + (delay) + "ms");
-	return Promise.resolve(letter);
 }
 
 function addWordAndLetterClassesToText(textElement) {

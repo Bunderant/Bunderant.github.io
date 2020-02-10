@@ -1,14 +1,10 @@
-#adventure-time #splash > video,
 #adventure-time #splash > img {
-	filter: brightness(50%);
+	height: 100%;
+	width: 100%;
+	object-fit: contain;
+	filter: brightness(90%);
 }
 
 #adventure-time	#splash h1:first-of-type {
-	top: 45%;
-}
-
-@media only screen and (max-width: 500px) {
-	#adventure-time #splash h1:first-of-type {
-		top: 30%;
-	}
+	top: 60%;
 }

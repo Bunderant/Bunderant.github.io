@@ -293,11 +293,17 @@ p > a:active {
 	overflow: hidden;
 }
 
-#splash > video {
+#splash > video,
+#splash > img {
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+
+	min-width: 815px; /* prevents letterboxing on small screens */
+	width: 100%;
+
+	filter: brightness(70%);
 }
 
 #splash h1 {
@@ -323,15 +329,6 @@ p > a:active {
 	left: initial;
 	bottom: 0;
 	right: 0;
-}
-
-#splash video {
-	min-width: 815px; /* prevents letterboxing on small screens */
-	width: 100%;
-}
-
-#home #splash video {
-	filter: brightness(70%);
 }
 
 #bio {
@@ -374,12 +371,12 @@ p > a:active {
 	padding-top: 100%;
 }
 
-.grid-item .background-image {
+.background-image {
 	background-size: cover;
 	background-position: 50% 50%; /* Centered so that scaling on hover won't affect position. */
 }
 
-#shipped .grid-item .background-image {
+.grid-item .background-image {
 	filter: brightness(70%) /* Helps the text stand out a bit better and differentiate from the splash video. */
 }
 

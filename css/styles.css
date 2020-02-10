@@ -49,22 +49,20 @@ p {
 
 p > a, p > a:link, p > a:visited {
 	text-decoration: none;
-	text-shadow: 0.05em 0.05em 0em blue;
+	font-weight: bold;
 	color: inherit;
 
 	/* Underline transition fanciness inspired by http://pleeease.io */
-	background-image: linear-gradient(blue, blue);
+	background-image: linear-gradient(black, black);
 	background-repeat: no-repeat;
 	background-position: bottom;
-	background-size: 100% 2px;
-	padding: 0 2px;
+	background-size: 100% 3px;
+	padding: 0 2px 2px 2px;
 
 	transition: background-size .2s, color .2s;
 }
 
 #bio p > a, #bio p > a:link, #bio p > a:visited {
-	font-weight: bold;
-	text-shadow: none;
 	background-image: linear-gradient(whitesmoke, whitesmoke);
 }
 

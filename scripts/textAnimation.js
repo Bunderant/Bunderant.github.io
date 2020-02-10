@@ -28,7 +28,7 @@ function addAnimationDelayToLetters(textElement, initialDelay) {
 		
 		for (let letterIndex = 0; letterIndex < word.length; letterIndex++) {
 			const currentDelay = initialDelay + letterDelay;
-			generatedHtml += `<span class="letter" style="-webkit-animation-delay: ${currentDelay}ms; animation-delay: ${currentDelay}ms">` + word[letterIndex] + "</span>";
+			generatedHtml += `<span class="letter" style="-webkit-animation-delay: ${currentDelay}ms; animation-delay: ${currentDelay}ms;">` + word[letterIndex] + "</span>";
 			letterDelay += delayBetweenLetters;
 		}
 		generatedHtml += "</span>";

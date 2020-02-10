@@ -1,3 +1,8 @@
+#star-wars #splash video,
+#star-wars .background-image {
+	filter: none;
+}
+
 #bg-character-controls {
 	background-image: url(../images/vader-attack-1.gif);
 }

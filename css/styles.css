@@ -584,6 +584,24 @@ a.tiled-link {
 	background-image: url(../images/figure-drawing-cover-2x.JPG);
 }
 
+.EOF {
+	width: 100%;
+	height: 180px;
+}
+
+.EOF > .image-container {
+	position: relative;
+	height: 100%;
+
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+
+	background-image: url(../images/end-of-file-white.png);
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
 @keyframes bounce {
 	0% { transform: translateY(0); }
 	10% { transform: translateY(2px); }
@@ -618,6 +636,12 @@ a.tiled-link {
 
 	.section .video-wrapper {
 		width: calc(100% - 40px); /* Padding is behaving really strangely, so this'll have to do. */
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	.EOF {
+		height: 160px;
 	}
 }
 

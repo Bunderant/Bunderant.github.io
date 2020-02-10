@@ -20,7 +20,6 @@
 }
 
 .grid-item-content-wrapper > h2 {
-	text-shadow: 0em 0em 0.5em black;
 	top: 75%;
 
 	transition: top 0.2s;

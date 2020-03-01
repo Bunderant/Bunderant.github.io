@@ -14,8 +14,7 @@
 }
 
 #bloxels-edu #play .background-image {
-	-webkit-filter: none;
-	        filter: none;
+	filter: none;
 }
 
 #bloxels-edu #play h2 {
@@ -23,7 +22,6 @@
 }
 
 #bloxels-edu #play .tiled-link:not(.coming-soon) > h2::before {
-	background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(40%, whitesmoke), color-stop(55%, whitesmoke), to(transparent));
 	background: linear-gradient(to bottom, transparent 0%, whitesmoke 40%, whitesmoke 55%, transparent 100%);
 }
 

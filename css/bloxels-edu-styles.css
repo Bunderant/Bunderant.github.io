@@ -16,27 +16,7 @@
 }
 
 #bloxels-edu #play .tiled-link:not(.coming-soon) > h2::before {
-	position: absolute;
-	z-index: -1;
-	content: "";
-
-	top: 50%;
-	left: 50%;
-
-	transform: translate(-50%, -50%);
-	
-	width: 410px;
-	height: 120px;
-
-	background: linear-gradient(to right, transparent 0%, whitesmoke 2%, whitesmoke 98%, transparent 100%);
-
-	opacity: 0;
-	transition: opacity 0.2s;
-}
-
-#bloxels-edu #play .tiled-link:hover:not(.coming-soon) > h2::before {
-	opacity: 1;
-	transition: opacity 0.2s;
+	background: linear-gradient(to bottom, transparent 0%, whitesmoke 40%, whitesmoke 55%, transparent 100%);
 }
 
 #bloxels-edu #play h2.sub-heading {

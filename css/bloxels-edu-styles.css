@@ -2,6 +2,12 @@
 	background-color: black;
 }
 
+#bloxels-edu #play .grid-container
+{
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
 #bloxels-edu #play .grid-item {
 	max-height: 120px;
 	width: 100%;

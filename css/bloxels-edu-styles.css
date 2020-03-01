@@ -38,7 +38,7 @@
 	background-image: url(../images/bloxels-edu-arcade-banner.png);
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 1024px) {
 	#bloxels-edu #play {
 		display: none;
 	}

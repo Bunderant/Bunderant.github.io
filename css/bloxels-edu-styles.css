@@ -14,7 +14,8 @@
 }
 
 #bloxels-edu #play .background-image {
-	filter: none;
+	-webkit-filter: none;
+	        filter: none;
 }
 
 #bloxels-edu #play h2 {
@@ -39,12 +40,22 @@
 	width: 2887px; /* display height (300px - 20px padding) / image height * image width */
 	height: 100%;
 
-	animation: moveSlideshow 24s linear infinite;
+	-webkit-animation: moveSlideshow 24s linear infinite;
+
+	        animation: moveSlideshow 24s linear infinite;
+}
+
+@-webkit-keyframes moveSlideshow {
+	100% { 
+		-webkit-transform: translateX(-61.626506%); 
+		        transform: translateX(-61.626506%); /* width of repeating section / image width */  
+	}
 }
 
 @keyframes moveSlideshow {
 	100% { 
-		transform: translateX(-61.626506%); /* width of repeating section / image width */  
+		-webkit-transform: translateX(-61.626506%); 
+		        transform: translateX(-61.626506%); /* width of repeating section / image width */  
 	}
 }
 

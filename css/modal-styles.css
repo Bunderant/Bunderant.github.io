@@ -9,8 +9,7 @@
 
 	/* This is a little trick to center a fixed position element on the y-axis */
 	left: 50%;
-	-webkit-transform: translateX(-50%);
-	        transform: translateX(-50%);
+	transform: translateX(-50%);
 
 	width: 100%;
 	max-width: 1074px; /* max-width just a little larger than the page so the close button leans left a bit */
@@ -40,7 +39,6 @@
 	height: 34px;
 
 	background-color: rgb(0,0,0);
-	background: -webkit-gradient(linear, left bottom, left top, from(rgba(0,0,0,0)), color-stop(50%, rgba(0,0,0,1)));
 	background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 50%);
 }
 
@@ -58,10 +56,8 @@
 }
 
 #modal-panel-container {
-	display: -webkit-box;
 	display: flex;
-	-webkit-box-pack: center;
-	        justify-content: center;
+	justify-content: center;
 }
 
 #modal-panel {
@@ -77,21 +73,16 @@
 	border-width: 16px;
 	border-style: solid;
 
-	display: -webkit-box;
-
 	display: flex;
 	flex-wrap: wrap;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	        flex-direction: column;
+	flex-direction: column;
 }
 
 #modal-panel > .image-container > img {
 	display: block;
 	padding: 10px 0;
 	width: 100%;
-	left: 50%; -webkit-transform:
-	translateX(-50%); transform:
+	left: 50%; transform:
 	translateX(-50%);
 	position: relative;
 }
@@ -125,8 +116,7 @@
 	position: relative;
 	left: 50%;
 	top: 50%;
-	-webkit-transform: translate(-50%, -50%);
-	        transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
 }
 
 #modal-video-container {
@@ -158,17 +148,11 @@
 	right: 0;
 	top: 0;
 
-	-webkit-animation-name: fade;
-
-	        animation-name: fade;
-	-webkit-animation-timing-function: ease-in-out;
-	        animation-timing-function: ease-in-out;
-	-webkit-animation-iteration-count: infinite;
-	        animation-iteration-count: infinite;
-	-webkit-animation-duration: 2s;
-	        animation-duration: 2s;
-	-webkit-animation-direction: alternate;
-	        animation-direction: alternate;
+	animation-name: fade;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-duration: 2s;
+	animation-direction: alternate;
 }
 
 #modal-panel h1 {
@@ -288,8 +272,7 @@
 
 	width: 100%;
 	top: 50%;
-	-webkit-transform: translateY(-50%);
-	        transform: translateY(-50%);
+	transform: translateY(-50%);
 
 	text-align: center;
 
@@ -322,21 +305,6 @@
 
 #modal-panel .EOF > .image-container {
 	background-image: url(../images/end-of-file.png);
-}
-
-@-webkit-keyframes fade {
-	0% {
-		opacity: 0;
-	}
-	25% {
-		opacity: 0;
-	}
-	75% {
-		opacity: 1;
-	}
-	100% {
-		opacity: 1;
-	}
 }
 
 @keyframes fade {

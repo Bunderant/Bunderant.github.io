@@ -22,8 +22,6 @@
 .grid-item-content-wrapper > h2 {
 	top: 75%;
 
-	-webkit-transition: top 0.2s;
-
 	transition: top 0.2s;
 }
 

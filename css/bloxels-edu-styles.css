@@ -9,7 +9,7 @@
 }
 
 #bloxels-edu #play .grid-item {
-	max-height: 120px;
+	max-height: 300px;
 	width: 100%;
 }
 
@@ -19,10 +19,6 @@
 
 #bloxels-edu #play h2 {
 	font-size: 2em;
-}
-
-#bloxels-edu #play .tiled-link:not(.coming-soon) > h2::before {
-	background: linear-gradient(to bottom, transparent 0%, whitesmoke 40%, whitesmoke 55%, transparent 100%);
 }
 
 #bloxels-edu #play h2.sub-heading {
@@ -35,7 +31,21 @@
 }
 
 #bloxels-edu #bg-arcade {
+	position: absolute;
+	top: 0;
+	left: 0;
+
 	background-image: url(../images/bloxels-edu-arcade-banner.png);
+	width: 2887px; /* display height (300px - 20px padding) / image height * image width */
+	height: 100%;
+
+	animation: moveSlideshow 24s linear infinite;
+}
+
+@keyframes moveSlideshow {
+	100% { 
+		transform: translateX(-61.626506%); /* width of repeating section / image width */  
+	}
 }
 
 @media only screen and (max-width: 1024px) {

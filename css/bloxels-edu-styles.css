@@ -1,0 +1,45 @@
+#bloxels-edu #play {
+	background-color: black;
+}
+
+#bloxels-edu #play .grid-container
+{
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+#bloxels-edu #play .grid-item {
+	max-height: 120px;
+	width: 100%;
+}
+
+#bloxels-edu #play .background-image {
+	filter: none;
+}
+
+#bloxels-edu #play h2 {
+	font-size: 2em;
+}
+
+#bloxels-edu #play .tiled-link:not(.coming-soon) > h2::before {
+	background: linear-gradient(to bottom, transparent 0%, whitesmoke 40%, whitesmoke 55%, transparent 100%);
+}
+
+#bloxels-edu #play h2.sub-heading {
+	font-size: 1.25em;
+	text-align: right;
+}
+
+#bloxels-edu #play .grid-item-content-wrapper > h2 {
+	top: 50%;
+}
+
+#bloxels-edu #bg-arcade {
+	background-image: url(../images/bloxels-edu-arcade-banner.png);
+}
+
+@media only screen and (max-width: 1024px) {
+	#bloxels-edu #play {
+		display: none;
+	}
+}

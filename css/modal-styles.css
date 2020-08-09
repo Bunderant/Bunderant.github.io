@@ -148,11 +148,17 @@
 	right: 0;
 	top: 0;
 
-	animation-name: fade;
-	animation-timing-function: ease-in-out;
-	animation-iteration-count: infinite;
-	animation-duration: 2s;
-	animation-direction: alternate;
+	-webkit-animation-name: fade;
+
+	        animation-name: fade;
+	-webkit-animation-timing-function: ease-in-out;
+	        animation-timing-function: ease-in-out;
+	-webkit-animation-iteration-count: infinite;
+	        animation-iteration-count: infinite;
+	-webkit-animation-duration: 2s;
+	        animation-duration: 2s;
+	-webkit-animation-direction: alternate;
+	        animation-direction: alternate;
 }
 
 #modal-panel h1 {
@@ -305,6 +311,21 @@
 
 #modal-panel .EOF > .image-container {
 	background-image: url(../images/end-of-file.png);
+}
+
+@-webkit-keyframes fade {
+	0% {
+		opacity: 0;
+	}
+	25% {
+		opacity: 0;
+	}
+	75% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 
 @keyframes fade {

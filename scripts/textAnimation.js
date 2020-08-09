@@ -1,4 +1,5 @@
-document.addEventListener("DOMContentLoaded", initializeTileLinkTextAnimations);
+// TODO: Restore text animation if I can solve the sync issues on iOS. 
+// document.addEventListener("DOMContentLoaded", initializeTileLinkTextAnimations);
 
 function initializeTileLinkTextAnimations() {
 	const animatedTextElements = document.getElementsByClassName("animated-text");

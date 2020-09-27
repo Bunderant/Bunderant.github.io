@@ -3,14 +3,6 @@
 	filter: none;
 }
 
-#bg-character-controls {
-	background-image: url(../images/vader-attack-1.gif);
-}
-
-#bg-droopy {
-	background-image: url(../images/droopy-idle.gif);
-}
-
 .tiled-link {
 	background-color: black;
 }

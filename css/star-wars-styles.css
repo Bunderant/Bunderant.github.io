@@ -1,7 +1,6 @@
 #star-wars #splash video,
 #star-wars .background-image {
-	-webkit-filter: none;
-	        filter: none;
+	filter: none;
 }
 
 #bg-character-controls {

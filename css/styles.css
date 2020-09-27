@@ -6,10 +6,7 @@
 
 .no-select {
 	-webkit-tap-highlight-color: transparent; /* Not auto-generated, needed to prevent highlighting on Chrome mobile. */
-	-webkit-user-select: none;
-	   -moz-user-select: none;
-	    -ms-user-select: none;
-	        user-select: none;
+	user-select: none;
 }
 
 .mobile-breaking-space::after {
@@ -183,7 +180,6 @@ p > a:active {
 }
 
 #header {
-	position: -webkit-sticky;
 	position: sticky;
 	top: 0;
 	z-index: 1;
@@ -239,8 +235,7 @@ p > a:active {
 }
 
 #header > a .icon {
-	-webkit-filter: brightness(96.0784%);
-	        filter: brightness(96.0784%); /* 245/255, to match whitesmoke color. */
+	filter: brightness(96.0784%); /* 245/255, to match whitesmoke color. */
 }
 
 #header > a .icon-hover {
@@ -306,9 +301,7 @@ p > a:active {
 	min-width: 815px; /* prevents letterboxing on small screens */
 	width: 100%;
 
-	-webkit-filter: brightness(70%);
-
-	        filter: brightness(70%);
+	filter: brightness(70%);
 }
 
 #splash h1 {
@@ -382,8 +375,7 @@ p > a:active {
 }
 
 .grid-item .background-image {
-	-webkit-filter: brightness(70%);
-	        filter: brightness(70%) /* Helps the text stand out a bit better and differentiate from the splash video. */
+	filter: brightness(70%) /* Helps the text stand out a bit better and differentiate from the splash video. */
 }
 
 .word {
@@ -393,15 +385,10 @@ p > a:active {
 .letter {
 	display: inline-block;
 
-	-webkit-animation-duration: 2000ms;
-
-	        animation-duration: 2000ms;
-	-webkit-animation-name: bounce;
-	        animation-name: bounce;
-	-webkit-animation-timing-function: ease-out;
-	        animation-timing-function: ease-out;
-	-webkit-animation-iteration-count: infinite;
-	        animation-iteration-count: infinite;
+	animation-duration: 2000ms;
+	animation-name: bounce;
+	animation-timing-function: ease-out;
+	animation-iteration-count: infinite;
 }
 
 #skills .grid-item {
@@ -541,12 +528,6 @@ a.tiled-link {
 	transition: opacity 0.2s;
 }
 
-@-webkit-keyframes blinker {
-	50% {
-		opacity: 0;
-	}
-}
-
 @keyframes blinker {
 	50% {
 		opacity: 0;
@@ -608,14 +589,6 @@ a.tiled-link {
 	background-image: url(../images/end-of-file-white.png);
 	background-position: center;
 	background-repeat: no-repeat;
-}
-
-@-webkit-keyframes bounce {
-	0% { transform: translateY(0); }
-	10% { transform: translateY(2px); }
-	20% { transform: translateY(-4px); }
-	30% { transform: translateY(2px); }
-	40% { transform: translateY(0); }
 }
 
 @keyframes bounce {

@@ -261,15 +261,22 @@ p > a:active {
 
 #home #home-link {
 	pointer-events: none;
-	opacity: 50%;
+}
+
+#home #home-link .icon {
+	background-image: url(../images/icon-home-crusoe-minimal-black-and-white.png);
 }
 
 #home-link .icon {
-	background-image: url(../images/icon-initials-v3-blurred.png);
+	width: 50px;
+	height: 50px;
+	image-rendering: pixelated;
+	background-image: url(../images/icon-home-crusoe-minimal.png);
 }
 
 #home-link .icon-hover {
-	background-image: url(../images/icon-initials-v3-blurred-black.png);
+	image-rendering: pixelated;
+	background-image: url(../images/icon-home-crusoe-minimal-black-and-white.png);
 }
 
 #github-link .icon {

@@ -6,15 +6,18 @@
 		<meta name="viewport" content="width=device-width initial-scale=1.0, maximum-scale=1.0" />
 		<title>Mark Agne - Game Programmer</title>
 		<link rel="stylesheet" href="css/styles.css" />
-		<link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet" />
-		<link href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed&display=swap" rel="stylesheet">
+
+		<!-- Copied Google Fonts embed for JetBrains Mono (also used in app) -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+
 		<link rel="icon" type="image/png" href="images/favicon.png" />
 		<link rel="image_src" type="image/png" href="images/crusoe-outlined-large.png" />
-		<script src="scripts/textAnimation.js"></script>
 
 		<meta property="og:url" content="http://markagne.com" />
 		<meta property="og:type" content="website" />
-		<meta property="og:title" content="Mark Agne: A game programmer." />
+		<meta property="og:title" content="Mark Agne - Game Dev" />
 		<meta property="og:description" content="I make video games. And art and music. And this. This is a portfolio site." />
 
 		<meta property="og:image" content="http://markagne.com/images/crusoe-outlined-large.png" />
@@ -24,122 +27,8 @@
 		<meta property="og:image:height" content="510" />
 	</head>
 
-	<script type="text/javascript">
-		document.addEventListener('DOMContentLoaded', (event) => {
-			let artPortfolioLink = document.getElementById("figure-drawing-link");
-			let confirmIt = function (e) {
-				if (!confirm('Possibly NSFW! Tastefully nude drawings ahead. Are you sure you want to open the gallery?')) e.preventDefault();
-			};
-			artPortfolioLink.addEventListener('click', confirmIt, false);
-		});
-	</script>
-
 	<body id="home">
 		<div class="page">
-
-			<div id="header" class="section no-select">
-				<a id="home-link" href="./index.html">
-					<div class="backing"></div>
-					<div class="icon"></div>
-					<div class="icon-hover"></div>
-				</a>
-				<div class="spacer"></div>
-				<a id="github-link" href="https://github.com/Bunderant" target="_blank">
-					<div class="backing"></div>
-					<div class="icon"></div>
-					<div class="icon-hover"></div>
-				</a>
-				<a id="linkedin-link" href="https://linkedin.com/in/mark-agne" target="_blank">
-					<div class="backing"></div>
-					<div class="icon"></div>
-					<div class="icon-hover"></div>
-				</a>
-			</div>
-
-			<div id="splash" class="section">
-				<!-- TODO: poster image should eventually be first frame of the final video -->
-				<video autoplay playsinline muted loop preload="auto" poster="images/home-splash-banner-cover.png">
-					<source src="videos/home-splash-banner.mp4" type="video/mp4" />
-				</video>
-				<h1 id="title">Mark Agne</h1>
-				<h1 class="sub-heading">(Programmer)</h1>
-			</div>
-
-			<div id="bio" class="section">
-				<p class="description">
-					Starting at <a href="https://www.bloxels.com/" target="_blank">Pixel Press</a> in 2014, with a couple years at 
-					<a href="https://graphitelab.com/" target="_blank">Graphite Lab</a> along the way, I've been making video games
-					professionally in St. Louis for nearly 10 years. Using <a href="http://www.unity.com" target="_blank">Unity</a>, I've mainly 
-					worked on gameplay and rendering systems, UX/UI, engine tools, and markerless AR systems for the Bloxels physical product.
-				</p>
-			</div>
-
-			<div id="shipped" class="section">
-				<h1>Shipped Games</h1>
-				<div class="grid-container no-select">
-					<div class="grid-item">
-						<a class="grid-item-content-wrapper tiled-link" href="/bloxels-edu.html">
-							<div id="bg-bloxels-edu" class="background-image scale-container" draggable="false"></div>
-							<div class="overlay"></div>
-							<h2 class="animated-text">bloxels</h2>
-						</a>
-					</div>
-					<div class="grid-item">
-						<a class="grid-item-content-wrapper tiled-link" href="/bloxels-star-wars.html">
-							<div id="bg-star-wars" class="background-image scale-container" draggable="false"></div>
-							<div class="overlay"></div>
-							<h2 class="animated-text">star wars</h2 class="animated-text">
-						</a>
-					</div>
-					<div class="grid-item">
-						<a class="grid-item-content-wrapper tiled-link coming-soon">
-							<div id="bg-bloxels-builder" class="background-image scale-container" draggable="false"></div>
-							<div class="overlay"></div>
-							<h2 class="animated-text">bloxels builder</h2>
-						</a>
-					</div>
-					<div class="grid-item">
-						<a class="grid-item-content-wrapper tiled-link" href="/adventure-time.html">
-							<div id="bg-adventure-time" class="background-image scale-container" draggable="false"></div>
-							<div class="overlay"></div>
-							<h2 class="animated-text">adventure time</h2>
-						</a>
-					</div>
-				</div> <!-- end grid-container -->
-
-			</div> <!-- end section shipped -->
-
-			<div id="skills" class="section">
-				<h1>Skills (Unrequited)</h1>
-				<p class="description">
-                    Here's a collection of relics from my often musical and sometimes arty past. I do love to draw, 
-                    but don't put myself to the task often. On the other hand, since I first picked up a guitar, making music 
-                    has been a constant for these past twenty some-odd years. One of these days I'll put this ever-expanding pile
-                    of pedals and studio gear to work and replace this Soundcloud link with a fancy Bandcamp one. 
-                </p>
-				<div class="grid-container no-select">
-					<div class="grid-item">
-						<a id="figure-drawing-link" class="grid-item-content-wrapper tiled-link" href="http://markagne.crevado.com">
-							<div id="bg-figure-drawing" class="background-image scale-container" draggable="false"></div>
-							<div class="overlay"></div>
-							<h2 class="animated-text">figure drawing</h2>
-						</a>
-					</div>
-					<div class="grid-item">
-						<div class="grid-item-content-wrapper">
-							<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay"
-								src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/146204919&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
-							</iframe>
-						</div>
-					</div>
-				</div>
-			</div>
-			
-			<div id="footer" class="section">
-				<div class="EOF">
-					<div class="image-container"></div>
-				</div>
-			</div>
 		</div> <!-- end page -->
 	</body>
 

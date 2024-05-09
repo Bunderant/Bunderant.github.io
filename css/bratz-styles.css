@@ -1,0 +1,8 @@
+#adventure-time #splash > img {
+	height: 60%;
+	width: 60%;
+	-o-object-fit: contain;
+	   object-fit: contain;
+	-webkit-filter: brightness(100%);
+	        filter: brightness(100%);
+}

@@ -36,7 +36,7 @@
 	top: 0;
 	left: 0;
 
-	background-image: url(../images/bloxels-edu-arcade-banner.png);
+	background-image: url(../images/bloxels-edu-arcade-banner.webp);
 	width: 2887px; /* display height (300px - 20px padding) / image height * image width */
 	height: 100%;
 

@@ -19,8 +19,8 @@
 	cursor: pointer;
 
 	position: fixed;
-	left: 4px;
-	top: 4px;
+	right: 22px;
+	top: 8px;
 
 	width: 60px;
 	height: 60px;
@@ -359,8 +359,8 @@
 	}
 
 	#modal-close-button {
-		left: -6px;
-		top: -2px;
+		right: 14px;
+		top: 4px;
 	}
 
 	.container p,

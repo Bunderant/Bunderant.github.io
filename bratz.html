@@ -49,34 +49,42 @@
 			<div id="splash" class="section">
 				<img class="no-select" src="./images/bratz/bratz-logo.png" draggable="false" />
 				<h1 id="title"></h1>
-				<h1 class="sub-heading">2020-2021</h1>
+				<h1 class="sub-heading">2020-2022</h1>
 			</div>
 
 			<div id="history" class="section">
-				<h1>Total Fashion Makeover</h1>
-				<p><a href="http://www.projectpixelpress.com/adventure-time-game-wizard" target="_blank">Adventure Time: Game Wizard</a> was the 
-					first game I worked on at Pixel Press, in collaboration with <a href="http://grumpyfacestudios.blogspot.com/" target="_blank">Grumpyface 
-					Studios</a> and Cartoon Network. Having followed in the footsteps of <a href="http://www.projectpixelpress.com/floors" target="_blank">Floors</a> 
-					(the game that launched Pixel Press via Kickstarter), Game Wizard is a 2D platformer with a substantial level editor. Also similarly, 
-					players could draw levels on graph paper using a set of symbols, then use a mobile device's camera to "scan" their designs into the game. 
+				<h1>Fashion</h1>
+				<p><a href="https://graphitelab.com/bratz-total-fashion-makeover-case-study/" target="_blank">Bratz: Total Fashion Makeover</a> was the 
+					second game I worked on with Graphite Lab, a contract job for <a href="https://outrightgames.com/us/" target="_blank">Outright Games</a>,
+					the license holder. The project could essentially be divided into three main branches; character customization, story, and match-three 
+					gameplay.
+					
 				</p>
 				<div class="video-wrapper">
 					<iframe class="embedded-video" width="560" height="315" src="https://www.youtube-nocookie.com/embed/Iv_uhaFbcYs?modestbranding=1" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 				</div>
-				<p>Pixel Press handled the level editor and game sharing aspects, while Grumpyface was responsible for gameplay and the vast majority 
-					of the game's art. I don't know who it was between Grumpyface and Cartoon Network, but someone is responsible for bringing
-					"Weird Al" Yankovic's vocal talents to bear on the wily "Doodle Wizard".
-				</p>
+				<div class="video-footer"></div>
 			</div>
 
 			<div id="my-role" class="section">
-				<h1>My Role</h1>
-				<p> I was fresh out of college coming into this project. Not like 1st-choice-loaf-of-bread-at-the-grocery-store fresh, but still, 
-					pretty fresh. I was mostly tasked with bug fixes and optimization to prevent crashes due to memory pressure. The tasks 
-					where I had more authorship pertained to the level editor. Specifically, the multi-touch pan and zoom controls, and efficiently 
-					rendering in-game art in the editor viewport. I'll refrain from posting any code samples or additional details here, being the 
-					distant past with proprietary code and all. It was a fun project to be a part of, and a nice way to kick off a career in game 
-					development. 
+				<h1>Designer Tools</h1>
+				<p>
+					Leading up to release, my main responsibility was to support our writer/designer Brad with tools to configure the game's story. This
+					included the chapters and their completion requirements, tasks and associated costs/rewards, dialogue, and environment customization 
+					options exposed to the player.<br><br>
+
+					All this was done through a custom editor window I'd made with UI Toolkit. When  dragging scene objects into specified areas of the UI, 
+					they'd be bound to ScriptableObjects representing any relevant config data, refereced by GUID. I'd made a decision early on distribute
+					the data across many ScriptableObjects to avoid version control conflicts if multiple people were using the tool.<br><br>
+
+					Post-release, the size of the game began to bloat as we added more customization options and features. As is often the case, textures 
+					were the main culprit. Bratz had tons of popups for different notifications and activities, and while most had the same theme, the 
+					large backing graphics were almost all unique.<br><br>
+
+					To reclaim the lost megabytes, I built a custom Image component allowing us to rebuild these unique popup panels from only a single
+					tiled "fill" texture, whose UVs could be skewed, scaled, and rotated. The corners could be manipulated individually through handles in the 
+					scene view, with an adjustable corner radius. Making these adjustments would rearrange/rebuild the Graphic's geometry as necessary, its 
+					triangles fanning out from a single central vertex. 
 				</p>
 			</div>
 

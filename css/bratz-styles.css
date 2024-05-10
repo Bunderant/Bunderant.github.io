@@ -6,3 +6,7 @@
 	-webkit-filter: brightness(100%);
 	        filter: brightness(100%);
 }
+
+#my-role {
+	background-color: palegoldenrod;
+}

@@ -103,6 +103,11 @@ p > a:active {
 	background-color: whitesmoke;
 }
 
+/* Used for section videos that don't have text content below */
+.section .video-footer {
+	height: 30px;
+}
+
 #header.section {
 	border: none;
 }
@@ -663,6 +668,14 @@ a.tiled-link {
 
 	.section .video-wrapper {
 		width: calc(100% - 40px); /* Padding is behaving really strangely, so this'll have to do. */
+	}
+
+	.section .video-wrapper {
+		padding-bottom: 20px;
+	}
+
+	.section .video-footer {
+		height: 20px;
 	}
 }
 

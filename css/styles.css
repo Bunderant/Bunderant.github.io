@@ -36,8 +36,9 @@ html {
 
 h1,
 h2 {
-	font-family: 'Press Start 2P', Arial, Helvetica, sans-serif;
-	line-height: 1.25em;
+	font-family: 'JetBrains Mono', Arial, Helvetica, sans-serif;
+	font-size: 1.5em;
+	line-height: 1.3333333em;
 }
 
 h1 {
@@ -45,8 +46,8 @@ h1 {
 }
 
 p {
-	font-family: 'Barlow Semi Condensed', sans-serif, monospace;
-	font-size: 1.333333em;
+	font-family: 'JetBrains Mono', sans-serif, monospace;
+	font-size: 1em;
 	line-height: 1.333333em;
 }
 
@@ -567,7 +568,6 @@ a.tiled-link {
 
 .grid-item-content-wrapper > h2 {
 	color: whitesmoke;
-	text-transform: uppercase;
 	text-shadow: 0.125em 0.125em 0em black;
 
 	text-align: center;

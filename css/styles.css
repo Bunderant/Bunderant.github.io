@@ -41,10 +41,6 @@ h2 {
 	line-height: 1.3333333em;
 }
 
-h1 {
-	text-transform: uppercase;
-}
-
 p {
 	font-family: 'JetBrains Mono', sans-serif, monospace;
 	font-size: 1em;
@@ -354,6 +350,15 @@ p > a:active {
 }
 
 #bio p {
+	color: whitesmoke;
+	padding: 20px;
+}
+
+#thanks {
+	background-color: rgb(64, 64, 64);
+}
+
+#thanks p {
 	color: whitesmoke;
 	padding: 20px;
 }

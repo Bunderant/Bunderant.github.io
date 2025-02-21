@@ -589,6 +589,10 @@ a.tiled-link {
 	transition: color 0.2s;
 }
 
+#bg-rollercoaster {
+	background-image: url(../images/project-covers/rct.webp);
+}
+
 #bg-bloxels-edu {
 	background-image: url(../images/project-covers/bloxels-edu-1x.webp);
 }
